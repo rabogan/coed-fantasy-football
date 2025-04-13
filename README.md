@@ -32,7 +32,7 @@ cd coed-fantasy-football
 - Inspired by fantasy football games, with a 6-a-side **co-ed twist**.
 - Layout includes a visual football pitch and sortable player catalog.
 
-![Fantasy Football Inspiration](https://user-images.githubusercontent.com/example/fantasy-inspo.png)
+![Fantasy Football Website](images/fantasy-football-website.png)
 
 ---
 
@@ -51,6 +51,14 @@ Player data lives in `player_dataset.json`, structured as an array of objects. E
 - **Dataset**: [EA Sports FC 25: Ratings and Stats](https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download)
   - Top 20 male and top 10 female players from each club.
   - Gender labels and image references were added manually.
+
+### 📎 Footer Credit
+```html
+<footer>
+  <p>Built with using open data from David Nyagami's EA Sports FC 25 <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">Kaggle dataset</a> and credited images from Wikimedia Commons</p>
+  <p><a href="https://www.flaticon.com/free-icons/soccer" target="_blank" rel="noopener noreferrer">Soccer icons by Freepik – Flaticon</a></p>
+</footer>
+```
 
 ---
 
@@ -93,3 +101,4 @@ See the [LICENSE](LICENSE) file for licensing details.
 
 ## 📓 Personal Notes
 This README is updated regularly to track decisions, progress, and ideas.
+
