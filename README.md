@@ -1,132 +1,95 @@
-# SEA Stage 2 - Data Catalog Project
+# ⚽️ Co-Ed Fantasy Football Selector
 
-This repository contains the instructions, requirements, and starter code for Stage Two of the Snap Engineering Academy application process.
+This is my personal submission for the **Snap Engineering Academy Stage 2 - Data Catalog Project**, themed around real-world football matchups and inspired by Premier League Fantasy UI design.
 
----
-
-## 📚 Table of Contents
-
-- [Your Task](#your-task)
-- [Requirements](#requirements---your-catalog-website-should)
-- [Getting Started](#getting-started)
-- [Submitting](#submitting)
-- [❓ Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
+The project uses structured player data, HTML/CSS for design, and **vanilla JavaScript** for all interactivity — in full accordance with SEA guidelines.
 
 ---
 
-## 🎯 Your Task
+## 🏁 Project Setup Steps
 
-### <p align="center">Create a "catalog" website for something you're passionate about.</p>
+### ✅ Step 1: Repository Creation
+- GitHub Repo: [rabogan/coed-fantasy-football](https://github.com/rabogan/coed-fantasy-football)
+- Created from the SEA Stage 2 template using the "Use this template" button.
 
-> 📝 **Note:**  
-> If you have not used GitHub or programmed a website with JavaScript before, that's OK! Part of the challenge is figuring out things you're not familiar with.
+### ✅ Step 2: Local Environment
+```bash
+# Clone locally and enter the folder
+git clone https://github.com/rabogan/coed-fantasy-football.git
+cd coed-fantasy-football
+```
 
----
-
-## ✅ Requirements - Your Catalog Website Should...
-
-- Show off your understanding of basic data structures: **arrays** and **objects**.
-- Display a **substantial amount of interesting data** in a "catalog". You can look online for datasets or create your own.  
-  Your data should be easy to find in your source code—either in variables at the top of `scripts.js` or imported from a file.
-- Include **two or more features** that operate on your data and modify how it's displayed. Examples:
-  - Filtering
-  - Searching
-  - Sorting
-  - Updating
-  - Adding/removing entries  
-    Think about what users might want to do while using your site!
-- Look polished ✨. Use **HTML** and **CSS** to make your data easy to read and visually appealing.
-- Be built from this **starter code**—you can change anything you want, but build on top of it.
-- Be an **original** project. Please do not submit something previously created for a class, internship, or client.  
-  You are encouraged to use online resources, but **make sure you understand every line of code** in your project.
+### ✅ Step 3: First Browser Test
+- Opened the folder in VS Code.
+- Launched `index.html` in the browser.
+- Confirmed initial rendering and layout from starter files.
 
 ---
 
-## 🛠️ Getting Started
+## 🎨 Theme: Co-Ed Dream Team – Fantasy Football Selector
+- Based on **Real Madrid** and **Arsenal** (Men & Women squads).
+- Launching during a week when the real-life teams are playing each other.
+- Inspired by fantasy football games, with a 6-a-side **co-ed twist**.
+- Layout includes a visual football pitch and sortable player catalog.
 
-1. **Create a GitHub account** if you haven't already.
-2. Click the green **"Use as Template"** button in the upper right corner, then choose **"Create a new repository"**:  
-   a. Choose yourself as the owner  
-   b. Give your repository a name  
-   c. Click **"Create Repository"**
-3. Copy or download the files to your own computer.
-4. Open and edit the website using a text editor:
-   - Modify `index.html`, `style.css`, and `scripts.js`.
-   - To preview, open `index.html` in a web browser (double-click it).
-   - You should see something like this:
-
-<img height="300" alt="Screenshot of catalog example" src="https://github.com/Snap-Engineering-Academy-2023/rn_lab1/assets/7607483/fdd57236-50fe-48ca-956d-d9b4b12db038">
+![Fantasy Football Inspiration](https://user-images.githubusercontent.com/example/fantasy-inspo.png)
 
 ---
 
-## 🚀 Submitting
+## 🗂️ Data & Assets
 
-1. **Publish your website to the internet!**  
-   We recommend using [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site).
-2. **Test the published version.**  
-   Make sure everything works properly before submitting.
-3. **Update your GitHub repository** so it reflects the latest version of your project.
-4. **Submit** both:
-   - The **URL** to your published website
-   - The **link** to your GitHub repository  
-     …via the Google Form linked in your email.
+### 📦 Data Structure
+Player data lives in `player_dataset.json`, structured as an array of objects. Each player includes:
+- `name`, `rating`, `position`, `age`, `club`, `nationality`, `gender`, `player_image`, and `image_credit`
 
----
+### 🖼 Images
+- Player images from **Wikimedia Commons**, saved to `player-images/`
+- Citations and licenses listed in `images/credits.txt`
 
-## ❓ Frequently Asked Questions (FAQ)
-
-### ❄️ Is it OK that my catalog resets when I refresh the page?
-
-**Yes!** That's exactly what the starter code does too. You don't need to worry about preserving data after a page refresh.
+### 🔗 Sources
+- **Favicon** from: [Soccer icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/soccer)
+- **Dataset**: [EA Sports FC 25: Ratings and Stats](https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download)
+  - Top 20 male and top 10 female players from each club.
+  - Gender labels and image references were added manually.
 
 ---
 
-### 💻 Can I copy bits of code from online resources?
+## 🧩 Feature Roadmap (MVP Goals)
 
-**Yes, absolutely!** You should search for and use **small chunks** of code.  
-For example:
+1. **HTML/CSS Layout**
+   - Custom formation layout (2-1-2) over a football pitch.
+   - Sidebar for the player list (filterable/sortable).
 
-- ✅ Copying code to create a dropdown menu is fine.
-- ❌ Copying a full “filter data by date” feature is not.
+2. **Rendering**
+   - Display player cards using `player_dataset.json`.
+   - Implement modal-style detail view.
 
-Be thoughtful about what you borrow!
+3. **Filtering & Sorting**
+   - Filter players by club, gender, and position.
+   - Sort by rating or alphabetical order.
 
----
-
-### 🤖 Can I use generative AI (like ChatGPT or Copilot)?
-
-**Partially.**
-
-- ✅ You _may_ use AI tools to help write **HTML** and **CSS**.
-- ❌ You _may not_ use AI to write **JavaScript**.
-
-HTML/CSS can be tricky to get right, and it's okay to get help making things look nice.  
-But JavaScript is where you show your own logic and understanding of data!
+4. **Player Selection Logic**
+   - Select up to 6 players (max 1 goalkeeper).
+   - Must include at least 1 female player.
+   - Cards color-coded by club.
 
 ---
 
-### 🧰 Can I use a different template?
+## 🌟 Future Enhancements
 
-**Nope!**  
-You must use the provided starter code, though you're free to customize it however you like.  
-You _can_ copy **small chunks** from other templates if needed.
-
----
-
-### 🛠️ Can I use a framework like React, Vue, Bootstrap, or Tailwind?
-
-**Nope!**  
-This project is for folks new to web dev. Frameworks do a lot of heavy lifting and hide the logic we're asking you to demonstrate.  
-SEA will teach you frameworks later—stick to **vanilla HTML, CSS, and JS** for now.
+- **Form Uploads for Local Clubs** (expansion idea)
+- **Change Formations**
+- **Drag-and-Drop Positioning**
+- **Expanded Dataset with More Teams & Legends**
+- **Dark Mode and Alternate Formations**
+- **Save & Share Team (as JSON/image)**
 
 ---
 
-### 🌐 Can I use APIs?
-
-**Nope!**  
-APIs can add complexity beyond the scope of this challenge.  
-If you really want to use data from an API, **save it to a file** (like `.json` or `.csv`) and use that instead.
+## 📄 License
+See the [LICENSE](LICENSE) file for licensing details.
 
 ---
 
-> 💬 **Have any questions?** Drop them on the [Padlet here](https://padlet.com/arlenschallenge/2025-snap-engineering-academy-stage-2-project-assessment-que-ndmqkef3wxt8sh72) and we'll get back to you!
+## 📓 Personal Notes
+This README is updated regularly to track decisions, progress, and ideas.
