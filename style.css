@@ -347,6 +347,39 @@ footer a:hover {
   position: relative;
 }
 
+.pitch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pitch-action-btn {
+  background-color: #FFFC00; /* Snapchat Yellow */
+  color: black;
+  border: 2px solid black;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pitch-action-btn:hover {
+  background-color: #f5e900;
+  transform: translateY(-2px);
+}
+
+.pitch-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .main-container {
