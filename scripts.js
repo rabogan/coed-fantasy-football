@@ -166,7 +166,8 @@ function renderFlatList(players) {
 
 document.querySelectorAll('.position-slot').forEach(slot => {
   slot.addEventListener('click', () => {
-    // Wanted to avoid DRY with another X! This was the workaround: understand it
+    // Older technique that allows easier removal from the set.
+    // Logic duplicated in the Evaluate button added in this push.
     if (slot.classList.contains('filled')) {
       const playerAlreadySelected = slot.textContent.trim();
   
@@ -303,3 +304,40 @@ function checkForSixPlayersToDisplayButtons() {
     pitchControls.classList.add('hidden');
   }
 }
+
+clearTeamBtn.addEventListener('click', () => {    
+  const confirmFullRemove = confirm("Clear your team?");
+  if(confirmFullRemove){
+    document.querySelectorAll('.position-slot').forEach(slot => {
+      slot.innerHTML = permanentLabelEnabled(slot.getAttribute('player-position'));
+      slot.classList.remove('filled');
+    });
+    pitchControls.classList.add('hidden');
+
+    selectedPlayerSet.clear();
+    checkForSixPlayersToDisplayButtons();
+  }
+});
+
+clearTeamBtn.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  clearTeamBtn.click();
+});
+
+/* BASED ON THIS.  DRY Again!  
+Want to avoid repeating the code, but no time!
+if (slot.classList.contains('filled')) {
+  const playerAlreadySelected = slot.textContent.trim();
+
+  const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
+  if (confirmRemove && playerAlreadySelected) {
+    selectedPlayerSet.delete(playerAlreadySelected);
+    console.log(`Removed player from team: ${playerAlreadySelected}`);
+    const positionCode = slot.getAttribute('player-position');
+    slot.innerHTML = permanentLabelEnabled(positionCode);
+    slot.classList.remove('filled');
+  }
+
+  return;
+}
+  */

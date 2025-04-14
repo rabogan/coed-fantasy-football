@@ -202,6 +202,28 @@ export const positionGroupMapping = { ... };
 
 > 💬 While the implementation is not yet optimized, it works reliably across web and mobile. Plans are in place to improve efficiency and usability in the next iteration.
 
+### ✅ Milestone 8: Clear Team Button Added
+![Update 8](images/update-8.png)
+
+- A **Clear Team** button has been added below the pitch.
+- The button only appears after all 6 players are selected (i.e., `selectedPlayerSet.size === 6`).
+- When clicked:
+  - A confirmation alert (`window.confirm`) asks the user to confirm.
+  - If accepted, all pitch slots are reset to their original labels (e.g., "Defender").
+  - The global `Set` is cleared and the buttons are hidden again.
+
+#### 🧠 Key Details
+- This feature supports team re-selection and reinforces the correct use of the `Set` data structure.
+- The code for clearing the DOM elements avoids memory leaks and DOM clutter.
+- Works on desktop and mobile (via `click` and `touchstart`).
+- Found a simple workaround to avoid too much duplication on this!
+
+#### 🔗 Resources Consulted
+- [MDN: window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+- [MDN: Set.delete()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
+
+> ✅ A polished and user-friendly team reset mechanic — essential for playtesting and final scoring!
+
 
 ## 🧱 Player Card & Interaction
 
