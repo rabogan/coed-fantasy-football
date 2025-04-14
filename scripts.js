@@ -1,14 +1,46 @@
 // I studied some of the Colt Steele course on Udemy...but prefer React!
 // https://rabogan.github.io/ColtSteelePractice/javascriptSection/javascriptDOMIntro.html
 
-// Better resources (suggested by AI):
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-// https://javascript.info/custom-elements
-// For dropdown menus, https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
+function buildPlayerEntry(player) {
+  const playerEntry = document.createElement('div');
+  playerEntry.className = 'player-entry';
 
-import { buildPlayerEntry } from './helpers/buildPlayerEntry.js';
+  const playerLeftSection = document.createElement('div');
+  playerLeftSection.className = 'player-left';
+
+  const infoIcon = document.createElement('span');
+  infoIcon.className = 'info-button';
+  infoIcon.textContent = 'ℹ️';
+
+  const playerName = document.createElement('strong');
+  playerName.className = 'player-name';
+  playerName.textContent = player.name;
+
+  playerLeftSection.appendChild(infoIcon);
+  playerLeftSection.appendChild(playerName);
+
+  const playerRightSection = document.createElement('div');
+  playerRightSection.className = 'player-right';
+
+  const club = document.createElement('span');
+  club.className = 'player-meta';
+  club.textContent = player.club;
+
+  const rating = document.createElement('span');
+  rating.className = 'player-rating';
+  rating.textContent = player.rating;
+
+  playerRightSection.appendChild(club);
+  playerRightSection.appendChild(rating);
+
+  playerEntry.appendChild(playerLeftSection);
+  playerEntry.appendChild(playerRightSection);
+
+  return playerEntry;
+}
 
 let allPlayers = [];
+let selectedPositionSlot = null;
 
 fetch('player_dataset.json')
   .then(response => response.json())
@@ -122,6 +154,7 @@ function renderFlatList(players) {
 
 document.querySelectorAll('.position-slot').forEach(slot => {
   slot.addEventListener('click', () => {
+    selectedPositionSlot = slot;
     const popup = document.getElementById('playerListModalPopup');
     const content = document.getElementById('playerListPopupContent');
     // Optional: Copies the player list into the modal
@@ -130,6 +163,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   });
 
   slot.addEventListener('touchstart', () => {
+    selectedPositionSlot = slot;
     const popup = document.getElementById('playerListModalPopup');
     const content = document.getElementById('playerListPopupContent');
 
@@ -141,6 +175,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
 // https://www.w3schools.com/w3css/w3css_modal.asp
 document.getElementById('closePlayerListModal').addEventListener('click', () => {
   document.getElementById('playerListModalPopup').classList.add('hidden');
+  selectedPositionSlot = null; //When modal closes without selecting a player
 });
 
 // Close the modal when clicking outside of it
@@ -148,5 +183,6 @@ document.getElementById('playerListModalPopup').addEventListener('click', (event
   const content = document.querySelector('#playerListModalPopup .modal-content');
   if (!content.contains(event.target)) {
     document.getElementById('playerListModalPopup').classList.add('hidden');
+    selectedPositionSlot = null; //When modal closes without selecting a player
   }
 });

@@ -58,6 +58,23 @@ An array of **objects**, each with:
 }
 ```
 
+### ✅ JavaScript `Set`
+
+To prevent duplicate player selections and track unique picks, the app uses a JavaScript `Set`:
+
+- Efficient `.add()` and `.has()` operations
+- Ideal for storing a maximum of 6 unique players
+- Used for gamifying selection logic (e.g., when the set reaches 6, trigger a scoring modal)
+
+### 🔗 Learning Resources on `Set`
+
+- [W3Schools: JavaScript Set](https://www.w3schools.com/js/js_sets.asp)
+- [W3Schools: JavaScript Set Methods](https://www.w3schools.com/js/js_set_methods.asp)
+- [MDN Web Docs: Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- [JavaScript.info: Map and Set](https://javascript.info/map-set)
+
+These resources were consulted while implementing selection logic in `scripts.js`.
+
 ### 🖼 Image Sources
 - Player images: Wikimedia Commons (`/player-images/`)
 - Citations listed in `images/credits.txt`
