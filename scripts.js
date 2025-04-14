@@ -1,15 +1,63 @@
 // I studied some of the Colt Steele course on Udemy...but prefer React!
 // https://rabogan.github.io/ColtSteelePractice/javascriptSection/javascriptDOMIntro.html
 
+// Better resources (suggested by AI):
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+// https://javascript.info/custom-elements
+
 // Fetching my JSON data
 fetch('player_dataset.json')
   .then(response => response.json())
   .then(data => {
     console.log("JSON Player Data Loaded Successfully!");
-    const player = data[0]; // Mbappe is the first player in the dataset
+    const player = data[1]; // Mbappe is the first player in the dataset
     console.log(player); // Log the player object to the console
+    console.log(player.name); // Log the player's name to the console
+    console.log(player.age); // Log the player's age to the console
+    renderPlayer(player); // Call the function to render the player data
   })
   .catch(error => {
     console.error("Error loading JSON:", error);
   });
 
+  function renderPlayer(player) {
+    const playerDiv = document.getElementById('playerList');
+    playerDiv.innerHTML = '';
+  
+    const playerEntry = document.createElement('div');
+    playerEntry.className = 'player-entry';
+  
+    const playerLeftSection = document.createElement('div');
+    playerLeftSection.className = 'player-left';
+  
+    const infoIcon = document.createElement('span');
+    infoIcon.className = 'info-button';
+    infoIcon.textContent = 'ℹ️';
+  
+    const playerName = document.createElement('strong');
+    playerName.className = 'player-name';
+    playerName.textContent = player.name;
+  
+    playerLeftSection.appendChild(infoIcon);
+    playerLeftSection.appendChild(playerName);
+  
+    const playerRightSection = document.createElement('div');
+    playerRightSection.className = 'player-right';
+  
+    const club = document.createElement('span');
+    club.className = 'player-meta';
+    club.textContent = player.club;
+  
+    const rating = document.createElement('span');
+    rating.className = 'player-rating';
+    rating.textContent = player.rating;
+  
+    playerRightSection.appendChild(club);
+    playerRightSection.appendChild(rating);
+  
+    playerEntry.appendChild(playerLeftSection);
+    playerEntry.appendChild(playerRightSection);
+  
+    playerDiv.appendChild(playerEntry);
+  }
+  
