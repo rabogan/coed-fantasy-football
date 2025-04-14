@@ -50,7 +50,7 @@ cd coed-fantasy-football
 ## 🗂️ Data & Assets
 
 ### 📦 Data Structure
-Player data lives in `player_dataset.json`, structured as an array of objects. Each player includes:
+Player data lives in `player_dataset.json`, structured as an array of **objects**. Each player includes:
 - `name`, `rating`, `position`, `age`, `club`, `nationality`, `gender`, `player_image`, and `image_credit`
 
 ### 🖼 Images
@@ -141,11 +141,36 @@ All changes are implemented with clean, scoped media queries — without affecti
 ![Update 1 Screenshot](images/update-1.png)
 - Pitch view, club dropdown, and CSS theme are now in place.
 - Structural transformation from LA TV Shows template to football-centric UI.
-
+![Update 2 Screenshot](images/update-2.png)
+- Responsive design adjustments for mobile devices.
+- Using JS to load the first object in the player dataset.json.
+- Confirmed JSON array uses objects with key attributes for display.
 ---
 
 ## 📄 License
 See the [LICENSE](LICENSE) file for licensing details.
+
+---
+
+## 🧱 Player Card Layout & Interaction
+
+- Players are listed below the dropdown menu, initially grouped by position.
+- Each player is rendered from `player_dataset.json` with fields like `name`, `club`, `position`, and **EA Rating** (from the `rating` key).
+- The left side of each card includes an **information button** (`i`) to open a modal.
+- Modals differ slightly by device:
+  - On **desktop**, the modal appears centered over the page.
+  - On **mobile**, it opens full-width or over the player list.
+- Team color is indicated by a **simple circular badge**: red for Arsenal, white for Real Madrid.
+
+---
+
+## 🧪 Manual Testing Progress
+
+- Manually created a first player card for **Kylian Mbappé** under the `#playerList` container in `index.html`.
+- Adjusted layout and CSS to match a simple structure: Info Button → Name → Club → **EA Rating** (e.g., `91`).
+- Removed gender and club dot icons for a cleaner look.
+- Confirmed JSON loads via `fetch('player_dataset.json')`, logging Mbappé as expected.
+- Modal will be implemented later, but structure and styling are being prepped.
 
 ---
 
