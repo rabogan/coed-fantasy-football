@@ -212,6 +212,27 @@ export const positionGroupMapping = { ... };
   - If accepted, all pitch slots are reset to their original labels (e.g., "Defender").
   - The global `Set` is cleared and the buttons are hidden again.
 
+### ✅ Milestone 9: Evaluate Team Score Added
+![Update 9](images/update-9.png)
+
+- The **Evaluate** button is now functional and calculates the **average EA Rating** of the 6 selected players.
+- This feature uses native JavaScript methods to iterate through the selected player data and compute a team score.
+- Users can only evaluate their team once all 6 slots are filled.
+- A basic alert shows the calculated average rating with a success message.
+
+#### 🧠 JavaScript Skills Demonstrated
+- Use of `Set` to ensure only unique players are counted.
+- DOM traversal to extract player names and match them against the dataset.
+- Array methods like `.forEach()`, `.find()`, and `.reduce()` to locate, process, and average values.
+
+#### 🔗 Resources Consulted
+- [My practice notes on JS Array Methods](https://rabogan.github.io/ColtSteelePractice/javascriptSection/javascriptArrayMethods.html)
+- [W3Schools: JavaScript forEach()](https://www.w3schools.com/jsref/jsref_foreach.asp)
+- [W3Schools: JavaScript find()](https://www.w3schools.com/jsref/jsref_find.asp)
+- [W3Schools: JavaScript reduce()](https://www.w3schools.com/jsref/jsref_reduce.asp)
+
+> 🎉 A clear example of real-world array manipulation and DS knowledge applied in an interactive context!
+
 #### 🧠 Key Details
 - This feature supports team re-selection and reinforces the correct use of the `Set` data structure.
 - The code for clearing the DOM elements avoids memory leaks and DOM clutter.
