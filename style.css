@@ -386,6 +386,13 @@ footer a:hover {
   color: #444;
 }
 
+.player-credit {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 /* Responsive Behavior */
 @media (max-width: 768px) {
   .player-profile-content {

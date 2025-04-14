@@ -12,6 +12,12 @@ function buildPlayerEntry(player) {
   infoIcon.className = 'info-button';
   infoIcon.textContent = 'ℹ️';
 
+  // After much frustration, this is the fix for the info button
+  infoIcon.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    showPlayerProfile(player);
+  });
+
   const playerName = document.createElement('strong');
   playerName.className = 'player-name';
   playerName.textContent = player.name;
@@ -294,6 +300,19 @@ document.getElementById('playerListModalPopup').addEventListener('click', (event
   }
 });
 
+// Close the player profile modal when clicking the close button 
+document.getElementById('closePlayerProfileModal').addEventListener('click', () => {
+  document.getElementById('playerInformationModal').classList.add('hidden');
+});
+
+// Close by clicking outside the modal
+document.getElementById('playerInformationModal').addEventListener('click', (event) => {
+  const content = document.querySelector('.player-profile-content');
+  if (!content.contains(event.target)) {
+    document.getElementById('playerInformationModal').classList.add('hidden');
+  }
+});
+
 const pitchControls = document.getElementById('pitchControls');
 const clearTeamBtn = document.getElementById('clearTeamBtn');
 
@@ -325,6 +344,49 @@ clearTeamBtn.addEventListener('touchstart', (e) => {
   clearTeamBtn.click();
 });
 
+function showPlayerProfile(player) {
+  const modal = document.getElementById('playerInformationModal');
+  const detailsContainer = document.getElementById('playerProfileDetails');
+
+  detailsContainer.innerHTML = '';
+
+  const img = document.createElement('img');
+  img.src = `player-images/${player.player_image}`;
+  img.alt = player.name;
+
+  const name = document.createElement('h1');
+  name.textContent = player.name;
+
+  const club = document.createElement('p');
+  club.textContent = `Club: ${player.club}`;
+
+  const position = document.createElement('p');
+  position.textContent = `Position: ${player.position}`;
+
+  const rating = document.createElement('p');
+  rating.textContent = `EA Rating: ${player.rating}`;
+
+  const age = document.createElement('p');
+  age.textContent = `Age: ${player.age}`;
+
+  const nationality = document.createElement('p');
+  nationality.textContent = `Nationality: ${player.nationality}`;
+
+  const credit = document.createElement('p');
+  credit.className = 'player-credit';
+  credit.textContent = player.image_credit;
+  
+  detailsContainer.appendChild(img);
+  detailsContainer.appendChild(name);
+  detailsContainer.appendChild(club);
+  detailsContainer.appendChild(position);
+  detailsContainer.appendChild(rating);
+  detailsContainer.appendChild(age);
+  detailsContainer.appendChild(nationality);
+  detailsContainer.appendChild(credit);
+
+  modal.classList.remove('hidden');
+}
 
 const evaluateTeamBtn = document.getElementById('evaluateTeamBtn');
 

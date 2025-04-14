@@ -220,11 +220,42 @@ export const positionGroupMapping = { ... };
 - Users can only evaluate their team once all 6 slots are filled.
 - A basic alert shows the calculated average rating with a success message.
 
-### ✅ Milestone 10: Player Profile Modal (Pending)
-- Clicking the ℹ️ info button now opens a modal showing detailed player information.
-- Includes the player’s photo, name, club, rating, and more.
-- Data is sourced directly from the JSON object and `player_images/` folder.
-- Modal uses a dedicated `.player-profile-modal` container and overlays cleanly above all other elements.
+### ✅ Milestone 10: Player Information Modal (Profile Viewer)
+![Update 10](images/update-10.png)
+
+- Implemented a responsive **modal window** that displays detailed player profiles when the ℹ️ **info button** is clicked.
+- Each profile includes:
+  - A player image (sourced from `/player-images/`)
+  - Name, club, position, EA rating, age, nationality
+  - Image attribution (`image_credit`) pulled directly from the dataset
+- Modal uses a new HTML block (`#playerInformationModal`) appended near the end of `index.html`
+- Supports both closing via ❌ button and clicking outside the modal box
+- Accessible and consistent across both mobile and desktop views
+
+> ℹ️ Built using native HTML/CSS and guided by [W3Schools Modal Guide](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+### 🧱 CSS Class Features
+
+- `.player-profile-modal` and `.player-profile-content` define modal layout and styles
+- `.hidden` toggled to show/hide the modal without affecting layout flow
+- Uses soft gradients and shadows to improve readability and separation
+
+### 🖼 Attribution and Licensing
+
+- Player images display their respective credits as pulled from `player.image_credit`
+- These credits reference proper licensing from Wikimedia Commons
+- Reflects Snap’s commitment to ethical sourcing and transparent data use
+
+### ✅ HTML Snippet
+
+```html
+<div id="playerInformationModal" class="player-profile-modal hidden">
+  <div class="player-profile-content">
+    <button id="closePlayerProfileModal" class="close-profile-btn">&times;</button>
+    <div id="playerProfileDetails" class="profile-details"></div>
+  </div>
+</div>
+
 
 #### 🧠 JavaScript Skills Demonstrated
 - Use of `Set` to ensure only unique players are counted.
