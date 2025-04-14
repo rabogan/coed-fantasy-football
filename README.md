@@ -266,6 +266,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   });
 });
 
+// CLOSING a MODAL: https://www.w3schools.com/w3css/w3css_modal.asp
 // Close modal with X button
 document.getElementById('closePlayerListModal').addEventListener('click', () => {
   document.getElementById('playerListModalPopup').classList.add('hidden');

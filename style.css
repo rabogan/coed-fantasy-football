@@ -84,14 +84,16 @@ body {
   flex: 1;
   min-width: 260px;
   max-width: 300px;
-  background-color: #f0f2f6;
-  border: 1px solid #ddd;
+  background: linear-gradient(135deg, #e0e7ef, #d6dee8);
+  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1rem;
   height: auto;
   max-height: 90vh;
   overflow-y: auto;
   align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the player panel horizontally */
 }
 
 .filters {
@@ -264,7 +266,8 @@ footer a:hover {
 }
 
 .modal-content {
-  background: #fff;
+  background: linear-gradient(135deg, #e8f5e9, #dcedc8);
+  color: #333;
   padding: 1.5rem;
   border-radius: 10px;
   width: 90%;
@@ -273,6 +276,7 @@ footer a:hover {
   overflow-y: auto;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Center the modal content horizontally */
 }
 
 #closePlayerListModal {
@@ -290,6 +294,16 @@ footer a:hover {
 
 #closePlayerListModal:hover {
   color: #d32f2f;
+}
+
+/* Scrollable Player List */
+.scrollable-player-list {
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.scrollable-player-list::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar in WebKit browsers (Chrome, Edge, Safari) */
 }
 
 /* Responsiveness */
@@ -310,13 +324,14 @@ footer a:hover {
   }
 
   .player-panel {
-    margin-top: 0;
-    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 95%; /* Prevent overspill on smaller screens */
+    margin: 0 auto; /* Center horizontally */
   }
 
   .modal-content {
-    width: 95%;
-    height: 90vh;
+    width: 95%; /* Prevent overspill on smaller screens */
+    margin: 0 auto; /* Center horizontally */
   }
 }
 
@@ -343,6 +358,13 @@ footer a:hover {
   }
 
   .player-panel {
-    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 90%; /* Further reduce width for very small screens */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .modal-content {
+    width: 90%; /* Further reduce width for very small screens */
+    margin: 0 auto; /* Center horizontally */
   }
 }
