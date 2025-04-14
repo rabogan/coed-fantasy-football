@@ -283,7 +283,6 @@ footer a:hover {
   border: none;
   background: none;
   position: absolute;
-  line-height: 1;
   top: 1rem;
   right: 1.5rem;
   transition: color 0.2s ease;

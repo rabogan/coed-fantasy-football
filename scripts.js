@@ -138,6 +138,15 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   });
 });
 
+// https://www.w3schools.com/w3css/w3css_modal.asp
 document.getElementById('closePlayerListModal').addEventListener('click', () => {
   document.getElementById('playerListModalPopup').classList.add('hidden');
+});
+
+// Close the modal when clicking outside of it
+document.getElementById('playerListModalPopup').addEventListener('click', (event) => {
+  const content = document.querySelector('#playerListModalPopup .modal-content');
+  if (!content.contains(event.target)) {
+    document.getElementById('playerListModalPopup').classList.add('hidden');
+  }
 });
