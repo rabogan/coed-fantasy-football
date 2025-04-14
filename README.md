@@ -133,6 +133,9 @@ All styles adjusted with media queries:
 - Used [W3Schools dropdown template](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown) for ideas
 - Implemented `change` event listener ([MDN reference](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event))
 - Used object mappings in code like:
+- Referenced helpful documentation:
+  - [W3Schools Dropdown Menu Tutorial](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown)
+  - [MDN switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 ```js
 export const positionGroups = { ... };
 export const clubMapping = { ... };
@@ -140,6 +143,17 @@ export const genderMapping = { ... };
 export const positionGroupMapping = { ... };
 ```
 > ⚠️ I've used this modular style with React before, but wasn't sure if it’s standard for vanilla JavaScript. Keeping logic grouped in one file felt cleaner for this project.
+
+### Milestone 5: Modal Popup for Player Selection
+![Update 5](images/update-5.png)
+- Successfully implemented a modal popup triggered by clicking on any pitch position.
+- The modal displays a larger, centralized version of the player list for easier browsing.
+- Each pitch slot listens for both `click` and `touchstart` events for device flexibility.
+- Modal closes via the "×" button (with plans to support click-outside-to-close soon).
+- Code improvements:
+  - Removed redundant CSS.
+  - Ensured modal content is dynamically populated from the live player list.
+- See section on Modals below!
 
 ---
 
