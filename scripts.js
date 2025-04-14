@@ -10,10 +10,7 @@ fetch('player_dataset.json')
   .then(response => response.json())
   .then(data => {
     console.log("JSON Player Data Loaded Successfully!");
-    const player = data[1]; // Mbappe is the first player in the dataset
-    console.log(player); // Log the player object to the console
-    console.log(player.name); // Log the player's name to the console
-    console.log(player.age); // Log the player's age to the console
+    const player = data[1]; // Jude Bellingham is the first player in the dataset
     renderPlayer(player); // Call the function to render the player data
   })
   .catch(error => {
