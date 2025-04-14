@@ -176,7 +176,6 @@ document.querySelectorAll('.position-slot').forEach(slot => {
           return;
         }
   
-        // Create .slot-filled's contents
         const filledDiv = document.createElement('div');
         filledDiv.className = 'slot-filled';
   
@@ -184,14 +183,11 @@ document.querySelectorAll('.position-slot').forEach(slot => {
         nameSpan.textContent = playerName;
         filledDiv.appendChild(nameSpan);
   
-        // Clear and fill the slot
         selectedPositionSlot.innerHTML = '';
         selectedPositionSlot.appendChild(filledDiv);
         selectedPositionSlot.classList.add('filled');
-  
-        // Track selection and close
         selectedPlayerSet.add(playerName);
-        console.log(`Selected player: ${playerName}`);
+        console.log(`Selected player added to team: ${playerName}`);
         selectedPositionSlot = null;
         popup.classList.add('hidden');
       });
