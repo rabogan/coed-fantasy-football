@@ -161,21 +161,6 @@ body {
   transform: translateY(-2px);
 }
 
-.player-image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-
-.player-details {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-}
-
 /* Player Name */
 .player-name {
   font-weight: bold;
@@ -198,6 +183,7 @@ body {
   color: #00796b;
 }
 
+/* Info Button */
 .info-button {
   background: none;
   border: none;
@@ -209,11 +195,6 @@ body {
 
 .info-button:hover {
   color: #0056b3;
-}
-
-.player-name {
-  font-weight: bold;
-  flex-grow: 1;
 }
 
 .player-left {
@@ -245,10 +226,12 @@ footer {
   color: #ccc;
   font-size: 0.9rem;
 }
+
 footer a {
   color: #77c9d4;
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
@@ -259,6 +242,37 @@ footer a:hover {
   font-style: italic;
   margin-top: 0.5rem;
   text-align: center;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsiveness */
@@ -282,10 +296,14 @@ footer a:hover {
     margin-top: 0;
     margin-bottom: 2rem;
   }
+
+  .modal-content {
+    width: 95%;
+    height: 90vh;
+  }
 }
 
 @media (max-width: 500px) {
-  /* Shrink pitch height and spacing */
   .pitch {
     height: 480px;
     padding: 1rem;
@@ -297,19 +315,16 @@ footer a:hover {
     font-size: 0.85rem;
   }
 
-  /* Scale down header font size */
   .title {
     font-size: 2.5rem;
     line-height: 1.2;
   }
 
-  /* Compact dropdown appearance */
   .filters select {
     padding: 0.4rem;
     font-size: 0.95rem;
   }
 
-  /* Add breathing room below filter list */
   .player-panel {
     margin-bottom: 2rem;
   }

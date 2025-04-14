@@ -173,6 +173,105 @@ export const positionGroupMapping = { ... };
 
 ---
 
+## 🧰 Refresher of Modals and Popups using W3Schools Logic
+
+Inspired by the W3Schools approach to modal design, the player list popup on smaller devices uses a reusable modal structure with click/touch support. It overlays cleanly and supports responsive display and dismissal.
+
+### 📦 HTML Markup (Player List Modal)
+```html
+<div id="playerListModalPopup" class="modal hidden">
+  <div class="modal-content">
+    <span id="closePlayerListModal">&times;</span>
+    <div id="playerListPopupContent" class="scrollable-player-list"></div>
+  </div>
+</div>
+```
+
+### 🎨 CSS Styling (modal + mobile responsiveness)
+```css
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    height: 90vh;
+  }
+}
+```
+
+### 🧠 JavaScript Logic
+```js
+// Show modal when a pitch position is clicked or touched
+document.querySelectorAll('.position-slot').forEach(slot => {
+  slot.addEventListener('click', () => {
+    const popup = document.getElementById('playerListModalPopup');
+    const content = document.getElementById('playerListPopupContent');
+    content.innerHTML = document.getElementById('playerList').innerHTML;
+    popup.classList.remove('hidden');
+    console.log('📣 Modal opened via click');
+  });
+
+  slot.addEventListener('touchstart', () => {
+    const popup = document.getElementById('playerListModalPopup');
+    const content = document.getElementById('playerListPopupContent');
+    content.innerHTML = document.getElementById('playerList').innerHTML;
+    popup.classList.remove('hidden');
+    console.log('📱 Modal opened via touch');
+  });
+});
+
+// Close modal with X button
+document.getElementById('closePlayerListModal').addEventListener('click', () => {
+  document.getElementById('playerListModalPopup').classList.add('hidden');
+  console.log('❌ Modal closed manually');
+});
+
+// Close modal by clicking outside the popup content
+document.getElementById('playerListModalPopup').addEventListener('click', (e) => {
+  const modalContent = document.querySelector('#playerListModalPopup .modal-content');
+  if (!modalContent.contains(e.target)) {
+    document.getElementById('playerListModalPopup').classList.add('hidden');
+    console.log('🖱️ Modal closed by clicking outside');
+  }
+});
+```
+
+> ℹ️ Inspired by [W3Schools Modal Examples](https://www.w3schools.com/howto/howto_css_modals.asp), this implementation ensures proper mobile handling and responsiveness without requiring multiple modal components.
+
+---
+
 ## 📄 License
 
 See the [LICENSE](LICENSE) file.

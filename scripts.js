@@ -109,7 +109,7 @@ document.getElementById('playerFilterDropdown').addEventListener('change', (e) =
   }
 });
 
-// Utility function: Builds a list of players (no headers)
+// Uses the helper function to build the player entry
 function renderFlatList(players) {
   const playerListContainer = document.getElementById('playerList');
   playerListContainer.innerHTML = '';
@@ -119,3 +119,25 @@ function renderFlatList(players) {
     playerListContainer.appendChild(entry);
   });
 }
+
+document.querySelectorAll('.position-slot').forEach(slot => {
+  slot.addEventListener('click', () => {
+    const popup = document.getElementById('playerListModalPopup');
+    const content = document.getElementById('playerListPopupContent');
+    // Optional: Copies the player list into the modal
+    content.innerHTML = document.getElementById('playerList').innerHTML;
+    popup.classList.remove('hidden');
+  });
+
+  slot.addEventListener('touchstart', () => {
+    const popup = document.getElementById('playerListModalPopup');
+    const content = document.getElementById('playerListPopupContent');
+
+    content.innerHTML = document.getElementById('playerList').innerHTML;
+    popup.classList.remove('hidden');
+  });
+});
+
+document.getElementById('closePlayerListModal').addEventListener('click', () => {
+  document.getElementById('playerListModalPopup').classList.add('hidden');
+});
