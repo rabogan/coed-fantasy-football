@@ -38,6 +38,20 @@ fetch('player_dataset.json')
     'ARS W': 'Arsenal W'
   };
 
+  // Map gender options to lowercase (to match player.gender field)
+  const genderMapping = {
+    'Male': 'male',
+    'Female': 'female'
+  };
+
+  // Map dropdown codes to grouped EA positions
+  const positionGroupMapping = {
+    'GKP': ['GK'],
+    'DEF': ['CB', 'LB', 'RB'],
+    'MID': ['CDM', 'CM', 'CAM', 'LM', 'RM'],
+    'ATT': ['ST', 'LW', 'RW', 'CF']
+  };
+
   // Function to build and render player entries by position
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
   function renderByPosition(allPlayers) {
@@ -72,15 +86,30 @@ document.getElementById('playerFilterDropdown').addEventListener('change', (e) =
     return;
   }
 
-  // Team filtering based on clubMapping keys
+  // Team filtering based on clubMapping keys.  Is a switch statement better?
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
   if (selected in clubMapping) {
     const matchingTeam = clubMapping[selected];
     const filtered = allPlayers.filter(p => p.club === matchingTeam);
     renderFlatList(filtered);
   }
+
+  if (selected in genderMapping) {
+    const targetGender = genderMapping[selected];
+    const filtered = allPlayers.filter(p => p.gender === targetGender);
+    renderFlatList(filtered);
+    return;
+  }
+
+  if (selected in positionGroupMapping) {
+    const positions = positionGroupMapping[selected];
+    const filtered = allPlayers.filter(p => positions.includes(p.position));
+    renderFlatList(filtered);
+    return;
+  }
 });
 
-// 📋 Utility: Render a flat list of players (no headers)
+// Utility function: Builds a list of players (no headers)
 function renderFlatList(players) {
   const playerListContainer = document.getElementById('playerList');
   playerListContainer.innerHTML = '';

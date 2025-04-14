@@ -9,7 +9,6 @@ The project uses structured player data, HTML/CSS for design, and **vanilla Java
 ## 🏁 Project Setup Steps
 
 ### ✅ Meta Tag for Responsiveness
-- Included the following tag in `index.html` for proper mobile scaling:
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
@@ -20,28 +19,25 @@ The project uses structured player data, HTML/CSS for design, and **vanilla Java
 
 ### ✅ Step 2: Local Environment
 ```bash
-# Clone locally and enter the folder
 git clone https://github.com/rabogan/coed-fantasy-football.git
 cd coed-fantasy-football
 ```
 
 ### ✅ Step 3: First Browser Test
-- Opened the folder in VS Code.
-- Launched `index.html` in the browser.
-- Confirmed initial rendering and layout from starter files.
+- Opened in VS Code → launched `index.html` in browser → verified starter layout.
 
 ### ✅ Step 4: Deployment
-- Deployed live using **GitHub Pages**.
-- 🔗 Live Site: [https://rabogan.github.io/coed-fantasy-football](https://rabogan.github.io/coed-fantasy-football)
+- Live via GitHub Pages:
+  [https://rabogan.github.io/coed-fantasy-football](https://rabogan.github.io/coed-fantasy-football)
 
 ---
 
 ## 🎨 Theme: Co-Ed Dream Team – Fantasy Football Selector
 
-- Based on **Real Madrid** and **Arsenal** (Men & Women squads).
-- Launching during a week when the real-life teams (men and women) are playing each other in the **UEFA Champions League**.
-- Inspired by fantasy football games, with a 6-a-side **co-ed twist**.
-- Layout includes a visual football pitch and sortable player catalog.
+- Based on **Real Madrid** and **Arsenal** (Men & Women).
+- Coincides with actual UEFA Champions League fixtures.
+- Co-ed twist + fantasy football styling.
+- Displays a virtual pitch and sortable, filterable player list.
 
 ![Fantasy Football Website](images/fantasy-football-website.png)
 
@@ -49,21 +45,30 @@ cd coed-fantasy-football
 
 ## 🗂️ Data & Assets
 
-### 📦 Data Structure
-Player data lives in `player_dataset.json`, structured as an array of **objects**. Each player includes:
-- `name`, `rating`, `position`, `age`, `club`, `nationality`, `gender`, `player_image`, and `image_credit`
+### 📦 `player_dataset.json` Structure
+An array of **objects**, each with:
+```json
+{
+  "name": "Kylian Mbappé",
+  "rating": 91,
+  "position": "ST",
+  "club": "Real Madrid",
+  "gender": "Male",
+  ...
+}
+```
 
-### 🖼 Images
-- Player images from **Wikimedia Commons**, saved to `player-images/`
-- Citations and licenses listed in `images/credits.txt`
+### 🖼 Image Sources
+- Player images: Wikimedia Commons (`/player-images/`)
+- Citations listed in `images/credits.txt`
 
-### 🔗 Sources
-- **Favicon** from: [Soccer icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/soccer)
-- **Dataset**: [EA Sports FC 25: Ratings and Stats](https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download)
-  - Top 20 male and top 10 female players from each club.
-  - Gender labels and image references were added manually.
+### 🔗 External Resources
+- [EA Sports FC 25 Ratings Dataset (Kaggle)](https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download)
+- [Soccer icons by Freepik - Flaticon](https://www.flaticon.com/free-icons/soccer)
 
-### 📎 Footer Credit
+---
+
+## 📎 Footer Snippet
 ```html
 <footer>
   <p>Built using open data from David Nyagami's EA Sports FC 25 <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">Kaggle dataset</a> and credited images from Wikimedia Commons</p>
@@ -74,106 +79,100 @@ Player data lives in `player_dataset.json`, structured as an array of **objects*
 
 ---
 
-## 📱 Mobile Responsiveness Improvements
-
-To enhance the user experience on smaller screens, the layout now gracefully adapts for mobile:
-
-- On screens ≤ 768px, the layout switches from a side-by-side view to a stacked layout using Flexbox.
-- The pitch now appears **above** the player list on mobile for better usability and visual flow.
-- On screens ≤ 500px, additional refinements were added:
-  - Reduced pitch height to prevent vertical overflow.
-  - Shrunk player slot sizes and font for better fit.
-  - Header font size scaled down to avoid crowding.
-  - Filters/dropdowns are more compact and tap-friendly.
-  - Extra spacing was added below the player panel for comfortable scrolling.
-
-All changes are implemented with clean, scoped media queries — without affecting desktop layouts.
-
+## 📱 Mobile Responsiveness
+All styles adjusted with media queries:
 ```css
-/* Example: Mobile stacking behavior */
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
   }
-
   .pitch-panel {
     order: -1;
   }
 }
 ```
+- Pitch shown above the list on small screens.
+- Panel height, font size, and spacing adjusted for usability.
 
 ---
 
-## 🧩 Feature Roadmap (MVP Goals)
+## 🧩 Feature Roadmap (MVP)
 
-1. **HTML/CSS Layout**
-   - Custom formation layout (2-1-2) over a football pitch.
-   - Sidebar for the player list (filterable/sortable).
-
-2. **Rendering**
-   - Display player cards using `player_dataset.json`.
-   - Implement modal-style detail view.
-
-3. **Filtering & Sorting**
-   - Filter players by club, gender, and position.
-   - Sort by rating or alphabetical order.
-
-4. **Player Selection Logic**
-   - Select up to 6 players.
-   - Cards color-coded by club.
+- [x] Custom pitch UI (2-1-2 layout)
+- [x] JSON-based card rendering
+- [x] Modal placeholder for player detail
+- [x] Player filtering: team / gender / position
+- [ ] Select up to 6 players (in progress)
+- [ ] Save or export functionality
 
 ---
 
 ## 🌟 Future Enhancements
-
-- **Form Uploads for Local Clubs** (expansion idea)
-- **Change Formations**
-- **Drag-and-Drop Positioning**
-- **Expanded Dataset with More Teams & Legends**
-- **Dark Mode and Alternate Formations**
-- **Save & Share Team (as JSON/image)**
+- Add custom formations (drag + drop?)
+- Include local team upload form
+- Dark mode toggle
+- Save team state as image or JSON
+- Improve desktop spacing/layout
 
 ---
 
 ## 📸 Milestone Progress
 
-### Milestone 1: Initial Layout Complete
-![Update 1 Screenshot](images/update-1.png)
-- Pitch view, club dropdown, and CSS theme are now in place.
-- Structural transformation from LA TV Shows template to football-centric UI.
-![Update 2 Screenshot](images/update-2.png)
-- Responsive design adjustments for mobile devices.
-- Using JS to load the first object in the player dataset.json.
-- Confirmed JSON array uses objects with key attributes for display.
----
+### ✅ Milestone 1: Initial Layout
+![Update 1](images/update-1.png)
 
-## 📄 License
-See the [LICENSE](LICENSE) file for licensing details.
+### ✅ Milestone 2: JSON Object + Mobile View
+![Update 2](images/update-2.png)
 
----
+### ✅ Milestone 3: Grouped Rendering by Position
+![Update 3](images/update-3.png)
 
-## 🧱 Player Card Layout & Interaction
-
-- Players are listed below the dropdown menu, initially grouped by position.
-- Each player is rendered from `player_dataset.json` with fields like `name`, `club`, `position`, and **EA Rating** (from the `rating` key).
-- The left side of each card includes an **information button** (`i`) to open a modal.
-- Modals differ slightly by device:
-  - On **desktop**, the modal appears centered over the page.
-  - On **mobile**, it opens full-width or over the player list.
-- Team color is indicated by a **simple circular badge**: red for Arsenal, white for Real Madrid.
+### ✅ Milestone 4: Working Dropdown + Filtering
+![Update 4](images/update-4.png)
+- Built dropdown UI with HTML `<optgroup>` (ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup))
+- Used [W3Schools dropdown template](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown) for ideas
+- Implemented `change` event listener ([MDN reference](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event))
+- Used object mappings in code like:
+```js
+export const positionGroups = { ... };
+export const clubMapping = { ... };
+export const genderMapping = { ... };
+export const positionGroupMapping = { ... };
+```
+> ⚠️ I've used this modular style with React before, but wasn't sure if it’s standard for vanilla JavaScript. Keeping logic grouped in one file felt cleaner for this project.
 
 ---
 
-## 🧪 Manual Testing Progress
+## 🧱 Player Card & Interaction
 
-- Manually created a first player card for **Kylian Mbappé** under the `#playerList` container in `index.html`.
-- Adjusted layout and CSS to match a simple structure: Info Button → Name → Club → **EA Rating** (e.g., `91`).
-- Removed gender and club dot icons for a cleaner look.
-- Confirmed JSON loads via `fetch('player_dataset.json')`, logging Mbappé as expected.
-- Modal will be implemented later, but structure and styling are being prepped.
+- `ℹ️` info button on left side (modal coming soon)
+- Simple structure:
+  `info-icon` → `name` → `club` → **EA Rating**
+- Grouped visually by position
+- Dynamic rendering with:
+  ```js
+  import { buildPlayerEntry } from './helpers/buildPlayerEntry.js';
+  ```
+
+---
+
+## 🧪 Manual Testing Notes
+
+- All 60 players load correctly
+- Cards look great on mobile
+- Desktop spacing improved, but not final
+- JSON loading and filtering debugged via `console.log()`
 
 ---
 
 ## 📓 Personal Notes
-This README is updated regularly to track decisions, progress, and ideas.
 
+- Still learning best practices for organizing JS files in vanilla environments
+- I may revise to make the dropdown behavior more DRY (less repetition)
+- README updated often — final design not yet complete!
+
+---
+
+## 📄 License
+
+See the [LICENSE](LICENSE) file.
