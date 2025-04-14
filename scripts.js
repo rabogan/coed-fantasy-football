@@ -23,7 +23,7 @@ function buildPlayerEntry(player) {
   playerRightSection.className = 'player-right';
 
   const club = document.createElement('span');
-  club.className = 'player-meta';
+  club.className = 'player-club';
   club.textContent = player.club;
 
   const rating = document.createElement('span');
@@ -41,6 +41,7 @@ function buildPlayerEntry(player) {
 
 let allPlayers = [];
 let selectedPositionSlot = null;
+const selectedPlayerSet = new Set(); // Tracks players already selected!  O(1) lookup/deletion
 
 fetch('player_dataset.json')
   .then(response => response.json())
@@ -155,13 +156,48 @@ function renderFlatList(players) {
 document.querySelectorAll('.position-slot').forEach(slot => {
   slot.addEventListener('click', () => {
     selectedPositionSlot = slot;
+  
     const popup = document.getElementById('playerListModalPopup');
     const content = document.getElementById('playerListPopupContent');
-    // Optional: Copies the player list into the modal
-    content.innerHTML = document.getElementById('playerList').innerHTML;
+    const playerList = document.getElementById('playerList');
+  
+    content.innerHTML = playerList.innerHTML;
     popup.classList.remove('hidden');
+  
+    // Attach listeners to each player in modal (Step 2)
+    const modalPlayers = content.querySelectorAll('.player-entry');
+    modalPlayers.forEach(entry => {
+      entry.addEventListener('click', () => {
+        const playerName = entry.querySelector('.player-name')?.textContent;
+  
+        // Prevent null or duplicate selections (Step 3)
+        if (!playerName || selectedPlayerSet.has(playerName)) {
+          alert(`${playerName} is already on your team!`);
+          return;
+        }
+  
+        // Create .slot-filled's contents
+        const filledDiv = document.createElement('div');
+        filledDiv.className = 'slot-filled';
+  
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = playerName;
+        filledDiv.appendChild(nameSpan);
+  
+        // Clear and fill the slot
+        selectedPositionSlot.innerHTML = '';
+        selectedPositionSlot.appendChild(filledDiv);
+        selectedPositionSlot.classList.add('filled');
+  
+        // Track selection and close
+        selectedPlayerSet.add(playerName);
+        console.log(`Selected player: ${playerName}`);
+        selectedPositionSlot = null;
+        popup.classList.add('hidden');
+      });
+    });
   });
-
+  
   slot.addEventListener('touchstart', () => {
     selectedPositionSlot = slot;
     const popup = document.getElementById('playerListModalPopup');
