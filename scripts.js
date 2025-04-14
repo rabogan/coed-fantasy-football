@@ -60,7 +60,7 @@ fetch('player_dataset.json')
     'Goalkeepers': ['GK'],
     'Defenders': ['CB', 'LB', 'RB'],
     'Midfielders': ['CDM', 'CM', 'CAM', 'LM', 'RM'],
-    'Attackers': ['ST', 'LW', 'RW', 'CF']
+    'Attackers': ['ST', 'LW', 'RW', 'CF', 'REF']
   };
 
   // Map the clubs to their full names.  Updated: needs quotes around blankspaces
@@ -328,7 +328,7 @@ clearTeamBtn.addEventListener('touchstart', (e) => {
 
 const evaluateTeamBtn = document.getElementById('evaluateTeamBtn');
 
-// Rough implementation for now!
+// Rough implementation for now! Could add or remove points based on positions matching, but needed here.
 evaluateTeamBtn.addEventListener('click', () => {
   if(selectedPlayerSet.size < 6) {
     alert("Please select 6 players!");
@@ -342,7 +342,14 @@ evaluateTeamBtn.addEventListener('click', () => {
   });
 
   const averageRating = (totalRating / 6).toFixed(1);
-  alert(`⭐️ That's a nice squad you've put together! Average Rating: ${averageRating}`);
+  if (averageRating < 86) {
+    alert(` Your squad has potential! Average Rating: ${averageRating}`);
+    return;
+  }else if (averageRating < 88) {
+    alert(`⭐️ That's a nice squad you've put together! Average Rating: ${averageRating}`);
+    return;
+  }
+  alert(`🏆 Wow! That team is stacked! Average Rating: ${averageRating}`);
 });
 
 evaluateTeamBtn.addEventListener('touchstart', (e) => {
