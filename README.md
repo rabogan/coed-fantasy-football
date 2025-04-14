@@ -220,6 +220,12 @@ export const positionGroupMapping = { ... };
 - Users can only evaluate their team once all 6 slots are filled.
 - A basic alert shows the calculated average rating with a success message.
 
+### ✅ Milestone 10: Player Profile Modal (Pending)
+- Clicking the ℹ️ info button now opens a modal showing detailed player information.
+- Includes the player’s photo, name, club, rating, and more.
+- Data is sourced directly from the JSON object and `player_images/` folder.
+- Modal uses a dedicated `.player-profile-modal` container and overlays cleanly above all other elements.
+
 #### 🧠 JavaScript Skills Demonstrated
 - Use of `Set` to ensure only unique players are counted.
 - DOM traversal to extract player names and match them against the dataset.
