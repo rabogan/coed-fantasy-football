@@ -82,21 +82,29 @@ body {
 /* Player Panel */
 .player-panel {
   flex: 1;
-  background-color: #1c2541;
+  min-width: 260px;
+  max-width: 300px;
+  background-color: #f0f2f6;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
-  color: #fff;
-  max-height: 600px;
+  height: auto;
+  max-height: 90vh;
   overflow-y: auto;
+  align-self: flex-start;
 }
 
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filters input,
 .filters select {
-  width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  border: none;
 }
 
 /* Cards */
@@ -146,4 +154,58 @@ footer a:hover {
   font-style: italic;
   margin-top: 0.5rem;
   text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .pitch-panel,
+  .player-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pitch-panel {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .player-panel {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Shrink pitch height and spacing */
+  .pitch {
+    height: 480px;
+    padding: 1rem;
+  }
+
+  .position-slot {
+    width: 80px;
+    height: 50px;
+    font-size: 0.85rem;
+  }
+
+  /* Scale down header font size */
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  /* Compact dropdown appearance */
+  .filters select {
+    padding: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  /* Add breathing room below filter list */
+  .player-panel {
+    margin-bottom: 2rem;
+  }
 }
