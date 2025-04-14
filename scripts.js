@@ -194,14 +194,45 @@ document.querySelectorAll('.position-slot').forEach(slot => {
     });
   });
   
-  slot.addEventListener('touchstart', () => {
+  slot.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent click after tap
+  
     selectedPositionSlot = slot;
+  
     const popup = document.getElementById('playerListModalPopup');
     const content = document.getElementById('playerListPopupContent');
-
-    content.innerHTML = document.getElementById('playerList').innerHTML;
+    const playerList = document.getElementById('playerList');
+  
+    content.innerHTML = playerList.innerHTML;
     popup.classList.remove('hidden');
-  });
+  
+    const modalPlayers = content.querySelectorAll('.player-entry');
+    modalPlayers.forEach(entry => {
+      entry.addEventListener('click', () => {
+        const playerName = entry.querySelector('.player-name')?.textContent;
+  
+        if (!playerName || selectedPlayerSet.has(playerName)) {
+          alert(`${playerName} is already on your team!`);
+          return;
+        }
+  
+        const filledDiv = document.createElement('div');
+        filledDiv.className = 'slot-filled';
+  
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = playerName;
+        filledDiv.appendChild(nameSpan);
+  
+        selectedPositionSlot.innerHTML = '';
+        selectedPositionSlot.appendChild(filledDiv);
+        selectedPositionSlot.classList.add('filled');
+  
+        selectedPlayerSet.add(playerName);
+        selectedPositionSlot = null;
+        popup.classList.add('hidden');
+      });
+    });
+  });  
 });
 
 // https://www.w3schools.com/w3css/w3css_modal.asp

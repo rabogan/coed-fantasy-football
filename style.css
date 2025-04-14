@@ -309,8 +309,8 @@ footer a:hover {
 .slot-filled {
   width: 100%;
   height: 100%;
-  background-color: #fff59d;
-  color: #111;
+  background-color: black;
+  color: white;
   font-size: 0.75rem;
   font-weight: bold;
   display: flex;

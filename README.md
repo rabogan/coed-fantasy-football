@@ -172,6 +172,21 @@ export const positionGroupMapping = { ... };
   - Ensured modal content is dynamically populated from the live player list.
 - See section on Modals below!
 
+### ✅ Milestone 6: Add Player to Pitch
+![Update 6](images/update-6.png)
+- Players can now be selected and placed onto the pitch in any position.
+- Once selected, a player's name appears on the chosen slot with neutral styling (light background, dark font).
+- A global `Set` (`selectedPlayerSet`) tracks unique players and prevents duplicates.
+- Selections are responsive across web and mobile.
+
+### ⚠️ Known Bug
+- If a selected player is replaced in the UI, their name remains in the `Set`, preventing re-selection.
+- This will be addressed by adding an `❌` button to each filled slot:
+  - Clicking this button will remove the player from the `Set`.
+  - It will restore the pitch slot to its original state (e.g., "Forward").
+  - No new DOM element will be left behind — the slot will look exactly as it did before selection.
+- This will be implemented in the next update.
+
 ---
 
 ## 🧱 Player Card & Interaction
@@ -301,6 +316,24 @@ document.getElementById('playerListModalPopup').addEventListener('click', (e) =>
 ```
 
 > ℹ️ Inspired by [W3Schools Modal Examples](https://www.w3schools.com/howto/howto_css_modals.asp), this implementation ensures proper mobile handling and responsiveness without requiring multiple modal components.
+
+---
+
+---
+
+## 📵 Handling Touch Events and Preventing Ghost Clicks
+
+During testing on touch devices, I encountered an issue known as **ghost clicks**, where both `touchstart` and `click` events fire — resulting in duplicate behavior.
+
+### ✅ How I Handled It
+
+To address this, I used the `preventDefault()` method from the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) to prevent the follow-up `click` event when handling `touchstart`. This ensures only **one** event triggers modal behavior:
+
+```js
+element.addEventListener('touchstart', (e) => {
+  e.preventDefault(); // Prevent the ghost click
+  openModal();        // Custom function
+}, { passive: false });
 
 ---
 
