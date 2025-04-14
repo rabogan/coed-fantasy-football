@@ -305,6 +305,7 @@ function checkForSixPlayersToDisplayButtons() {
   }
 }
 
+// See line 228 (DRY)
 clearTeamBtn.addEventListener('click', () => {    
   const confirmFullRemove = confirm("Clear your team?");
   if(confirmFullRemove){
@@ -324,20 +325,27 @@ clearTeamBtn.addEventListener('touchstart', (e) => {
   clearTeamBtn.click();
 });
 
-/* BASED ON THIS.  DRY Again!  
-Want to avoid repeating the code, but no time!
-if (slot.classList.contains('filled')) {
-  const playerAlreadySelected = slot.textContent.trim();
 
-  const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
-  if (confirmRemove && playerAlreadySelected) {
-    selectedPlayerSet.delete(playerAlreadySelected);
-    console.log(`Removed player from team: ${playerAlreadySelected}`);
-    const positionCode = slot.getAttribute('player-position');
-    slot.innerHTML = permanentLabelEnabled(positionCode);
-    slot.classList.remove('filled');
+const evaluateTeamBtn = document.getElementById('evaluateTeamBtn');
+
+// Rough implementation for now!
+evaluateTeamBtn.addEventListener('click', () => {
+  if(selectedPlayerSet.size < 6) {
+    alert("Please select 6 players!");
+    return;
   }
+  let totalRating = 0;
 
-  return;
-}
-  */
+  selectedPlayerSet.forEach(playerName => {
+    const findPlayerObject = allPlayers.find(p => p.name === playerName);
+    totalRating += findPlayerObject.rating;
+  });
+
+  const averageRating = (totalRating / 6).toFixed(1);
+  alert(`⭐️ That's a nice squad you've put together! Average Rating: ${averageRating}`);
+});
+
+evaluateTeamBtn.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  evaluateTeamBtn.click();
+});
