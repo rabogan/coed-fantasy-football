@@ -24,14 +24,17 @@ cd coed-fantasy-football
 - Launched `index.html` in the browser.
 - Confirmed initial rendering and layout from starter files.
 
+### ✅ Step 4: Deployment
+- Deployed live using **GitHub Pages**.
+- 🔗 Live Site: [https://rabogan.github.io/coed-fantasy-football](https://rabogan.github.io/coed-fantasy-football)
+
 ---
 
 ## 🎨 Theme: Co-Ed Dream Team – Fantasy Football Selector
 - Based on **Real Madrid** and **Arsenal** (Men & Women squads).
-- Launching during a week when the real-life teams are playing each other.
+- Launching during a week when the real-life teams (men and women) are playing each other in the **UEFA Champions League**.
 - Inspired by fantasy football games, with a 6-a-side **co-ed twist**.
 - Layout includes a visual football pitch and sortable player catalog.
-
 ![Fantasy Football Website](images/fantasy-football-website.png)
 
 ---
@@ -55,15 +58,15 @@ Player data lives in `player_dataset.json`, structured as an array of objects. E
 ### 📎 Footer Credit
 ```html
 <footer>
-  <p>Built with using open data from David Nyagami's EA Sports FC 25 <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">Kaggle dataset</a> and credited images from Wikimedia Commons</p>
+  <p>Built using open data from David Nyagami's EA Sports FC 25 <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">Kaggle dataset</a> and credited images from Wikimedia Commons</p>
   <p><a href="https://www.flaticon.com/free-icons/soccer" target="_blank" rel="noopener noreferrer">Soccer icons by Freepik – Flaticon</a></p>
+  <p style="font-size: 0.8rem; color: #bbb;">This project coincides with Arsenal and Real Madrid (Men & Women) meeting in the UEFA Champions League — and reflects Snap's mission of creative, data-driven storytelling.</p>
 </footer>
 ```
 
 ---
 
 ## 🧩 Feature Roadmap (MVP Goals)
-
 1. **HTML/CSS Layout**
    - Custom formation layout (2-1-2) over a football pitch.
    - Sidebar for the player list (filterable/sortable).
@@ -77,20 +80,26 @@ Player data lives in `player_dataset.json`, structured as an array of objects. E
    - Sort by rating or alphabetical order.
 
 4. **Player Selection Logic**
-   - Select up to 6 players (max 1 goalkeeper).
-   - Must include at least 1 female player.
+   - Select up to 6 players.
    - Cards color-coded by club.
 
 ---
 
 ## 🌟 Future Enhancements
-
 - **Form Uploads for Local Clubs** (expansion idea)
 - **Change Formations**
 - **Drag-and-Drop Positioning**
 - **Expanded Dataset with More Teams & Legends**
 - **Dark Mode and Alternate Formations**
 - **Save & Share Team (as JSON/image)**
+
+---
+
+## 📸 Milestone Progress
+### Milestone 1: Initial Layout Complete
+![Update 1 Screenshot](images/update-1.png)
+- Pitch view, club dropdown, and CSS theme are now in place.
+- Structural transformation from LA TV Shows template to football-centric UI.
 
 ---
 

@@ -3,6 +3,7 @@
   <head>
     <title>Fantastic Football</title>
     <meta name="description" content="Show off DS Knowledge With A Fun Project" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
   </head>
@@ -11,21 +12,81 @@
     <header class="main-header">
       <h1 class="title">Fantastic Football</h1>
     </header>
-    <div id="card-container"></div>
+
+    <main class="main-container">
+      <section class="pitch-panel">
+        <div class="pitch">
+          <div class="position-row">
+            <div class="position-slot" data-position="GKP">Goalkeeper</div>
+          </div>
+          <div class="position-row">
+            <div class="position-slot" data-position="DEF">Defender</div>
+            <div class="position-slot" data-position="DEF">Defender</div>
+          </div>
+          <div class="position-row">
+            <div class="position-slot" data-position="MID">Midfielder</div>
+          </div>
+          <div class="position-row">
+            <div class="position-slot" data-position="ATT">Forward</div>
+            <div class="position-slot" data-position="ATT">Forward</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="player-panel">
+        <div class="filters">
+          <select id="playerFilterDropdown">
+            <option value="all">All Players</option>
+            <optgroup label="By Team">
+              <option value="RM">Real Madrid</option>
+              <option value="RM W">Real Madrid Women</option>
+              <option value="ARS">Arsenal</option>
+              <option value="ARS W">Arsenal Women</option>
+            </optgroup>
+            <optgroup label="By Gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </optgroup>
+            <optgroup label="By Position">
+              <option value="GKP">Goalkeepers</option>
+              <option value="DEF">Defenders</option>
+              <option value="MID">Midfielders</option>
+              <option value="ATT">Attackers</option>
+            </optgroup>
+          </select>
+        </div>
+        <div id="playerList" class="scrollable-player-list"></div>
+      </aside>
+    </main>
+
+    <!-- Template card, JS will populate this -->
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
+        <h2>Player Name</h2>
+        <img src="" alt="Player Image" />
         <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+          <li>Position</li>
+          <li>Club</li>
+          <li>Rating</li>
         </ul>
       </div>
     </div>
+
     <footer>
-      <p>Built with using open data from David Nyagami's EA Sports FC 25 <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">Kaggle dataset</a> and credited images from Wikimedia Commons</p>
-      <p><a href="https://www.flaticon.com/free-icons/soccer" target="_blank" rel="noopener noreferrer">Soccer icons by Freepik – Flaticon</a></p>
+      <p class="footer-author-message">
+        This project coincides with Arsenal and Real Madrid (Men & Women) meeting in the UEFA Champions League — and reflects Snap's mission of creative, data-driven storytelling.
+      </p>
+      <p>
+        Built using open data from David Nyagami's EA Sports FC 25
+        <a href="https://www.kaggle.com/datasets/nyagami/ea-sports-fc-25-database-ratings-and-stats?resource=download">
+          Kaggle dataset
+        </a> and credited images from Wikimedia Commons
+      </p>
+      <p>
+        <a href="https://www.flaticon.com/free-icons/soccer" target="_blank" rel="noopener noreferrer">
+          Soccer icons by Freepik – Flaticon
+        </a>
+      </p>
     </footer>
   </body>
 </html>
