@@ -11,36 +11,39 @@ fetch('player_dataset.json')
   .then(response => response.json())
   .then(data => {
     console.log("JSON Player Data Loaded Successfully!");
-    //renderAllPlayers(data); // Render all players
-    renderOnlyGoalkeepers(data); // Render only goalkeepers
+    renderByPosition(data); // Show players listed by position
   })
   .catch(error => {
     console.error("Error loading JSON:", error);
   });
 
-  function renderOnlyGoalkeepers(allPlayers) {
-    const playerDiv = document.getElementById('playerList');
-    playerDiv.innerHTML = '';
-  
-    const allGoalies = allPlayers.filter(player => player.position === 'GK');
-  
-    const goalkeeperHeading = document.createElement('h3');
-    goalkeeperHeading.textContent = 'Goalkeepers';
-    playerDiv.appendChild(goalkeeperHeading);
-  
-    allGoalies.forEach(player => {
-      const entry = buildPlayerEntry(player);
-      playerDiv.appendChild(entry);
+  // Groups the EA positions into everyday English
+  const positionGroups = {
+    Goalkeepers: ['GK'],
+    Defenders: ['CB', 'LB', 'RB'],
+    Midfielders: ['CDM', 'CM', 'CAM', 'LM', 'RM'],
+    Attackers: ['ST', 'LW', 'RW', 'CF']
+  };  
+
+  // Function to build and render player entries by position
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+  function renderByPosition(allPlayers) {
+    const playerListContainer = document.getElementById('playerList');
+    playerListContainer.innerHTML = '';
+
+    for (const [positionGroupName, positionsInGroup] of Object.entries(positionGroups)) {
+      const playersInThisGroup = allPlayers.filter(player =>
+        positionsInGroup.includes(player.position)
+      );
+
+    const groupHeader = document.createElement('h3');
+    groupHeader.textContent = positionGroupName;
+    groupHeader.className = 'group-header';
+    playerListContainer.appendChild(groupHeader);
+
+    playersInThisGroup.forEach(player => {
+      const playerCard = buildPlayerEntry(player);
+      playerListContainer.appendChild(playerCard);
     });
-  }
-  
-  // List all players in the sortable list
-  function renderAllPlayers(allPlayers) {
-    const playerDiv = document.getElementById('playerList');
-    playerDiv.innerHTML = ''; // Clear existing content
-  
-    allPlayers.forEach(player => {
-      const playerCard = buildPlayerEntry(player); // Using the helper function
-      playerDiv.appendChild(playerCard);
-    });
+    }
   }
