@@ -355,7 +355,7 @@ footer a:hover {
 }
 
 .pitch-action-btn {
-  background-color: #FFFC00; /* Snapchat Yellow */
+  background-color: red;
   color: black;
   border: 2px solid black;
   padding: 0.6rem 1.2rem;
@@ -367,7 +367,7 @@ footer a:hover {
 }
 
 .pitch-action-btn:hover {
-  background-color: #f5e900;
+  background-color: red;
   transform: translateY(-2px);
 }
 

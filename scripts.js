@@ -212,6 +212,8 @@ document.querySelectorAll('.position-slot').forEach(slot => {
         selectedPositionSlot.appendChild(filledDiv);
         selectedPositionSlot.classList.add('filled');
         selectedPlayerSet.add(playerName);
+        checkForSixPlayersToDisplayButtons();
+        console.log(`Number in team: ${selectedPlayerSet.size}`);
         console.log(`Selected player added to team: ${playerName}`);
         selectedPositionSlot = null;
         popup.classList.add('hidden');
@@ -267,6 +269,8 @@ document.querySelectorAll('.position-slot').forEach(slot => {
         selectedPositionSlot.classList.add('filled');
   
         selectedPlayerSet.add(playerName);
+        checkForSixPlayersToDisplayButtons();
+        console.log(`Number in team: ${selectedPlayerSet.size}`);
         selectedPositionSlot = null;
         popup.classList.add('hidden');
       });
@@ -288,3 +292,14 @@ document.getElementById('playerListModalPopup').addEventListener('click', (event
     selectedPositionSlot = null; //When modal closes without selecting a player
   }
 });
+
+const pitchControls = document.getElementById('pitchControls');
+const clearTeamBtn = document.getElementById('clearTeamBtn');
+
+function checkForSixPlayersToDisplayButtons() {
+  if (selectedPlayerSet.size === 6) {
+    pitchControls.classList.remove('hidden');
+  } else {
+    pitchControls.classList.add('hidden');
+  }
+}
