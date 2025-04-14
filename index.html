@@ -57,31 +57,17 @@
             </optgroup>
           </select>
         </div>
-        <div id="playerList" class="scrollable-player-list"></div>
+        <div id="playerList" class="scrollable-player-list">
+          <!-- Place this inside #playerList -->
+        <div class="player-entry">
+            <button class="info-button" title="More info">&#8505;</button>
+            <span class="player-name">Kylian Mbappé</span>
+            <span class="player-meta">Real Madrid</span>
+            <span class="ea-rating">91</span>
+          </div>
+        </div>
       </aside>
     </main>
-    <div class="player-entry">
-      <button class="info-button">i</button>
-      <img src="player-images/kylian-mbappe.jpg" alt="Kylian Mbappé" class="player-image" />
-      <div class="player-details">
-        <span class="player-name">Kylian Mbappé</span><br />
-        <span class="player-meta">Real Madrid • ST</span><br />
-        <span class="player-rating">EA Rating: 91</span>
-      </div>
-    </div>        
-
-    <!-- Template card, JS will populate this -->
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>Player Name</h2>
-        <img src="" alt="Player Image" />
-        <ul>
-          <li>Position</li>
-          <li>Club</li>
-          <li>Rating</li>
-        </ul>
-      </div>
-    </div>
 
     <footer>
       <p class="footer-author-message">
