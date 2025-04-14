@@ -10,17 +10,19 @@ fetch('player_dataset.json')
   .then(response => response.json())
   .then(data => {
     console.log("JSON Player Data Loaded Successfully!");
-    const player = data[1]; // Jude Bellingham is the first player in the dataset
-    renderPlayer(player); // Call the function to render the player data
+    const allPlayers = data;
+    renderPlayer(allPlayers); // Call the function to render the player data
   })
   .catch(error => {
     console.error("Error loading JSON:", error);
   });
 
-  function renderPlayer(player) {
+  // This can handle every player entry (rather than player card, which will come next)
+  function renderPlayer(allPlayers) {
     const playerDiv = document.getElementById('playerList');
     playerDiv.innerHTML = '';
-  
+
+    allPlayers.forEach(player => {
     const playerEntry = document.createElement('div');
     playerEntry.className = 'player-entry';
   
@@ -56,5 +58,6 @@ fetch('player_dataset.json')
     playerEntry.appendChild(playerRightSection);
   
     playerDiv.appendChild(playerEntry);
-  }
+  });
+}
   
