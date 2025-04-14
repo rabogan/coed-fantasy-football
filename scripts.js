@@ -131,6 +131,7 @@ document.getElementById('playerFilterDropdown').addEventListener('change', (e) =
 
   // Team filtering based on clubMapping keys.  Is a switch statement better?
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+  // Reviewing this code, hardcoding the club names was a mistake.  With more time, I would 
   if (selected in clubMapping) {
     const matchingTeam = clubMapping[selected];
     const filtered = allPlayers.filter(p => p.club === matchingTeam);

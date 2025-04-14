@@ -35,7 +35,7 @@ cd coed-fantasy-football
 ## 🎨 Theme: Co-Ed Dream Team – Fantasy Football Selector
 
 - Based on **Real Madrid** and **Arsenal** (Men & Women).
-- Coincides with actual UEFA Champions League fixtures.
+- The above teams were initially hardcoded into the index.html file: with more time, I'd implement a JSON-based solution for dynamic loading of teams. No time to research this.
 - Co-ed twist + fantasy football styling.
 - Displays a virtual pitch and sortable, filterable player list.
 
