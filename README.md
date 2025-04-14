@@ -189,6 +189,20 @@ export const positionGroupMapping = { ... };
 
 ---
 
+### ✅ Milestone 7: Allow Deletion of Players from Set
+![Update 7](images/update-7.png)
+- Clicking a player already placed on the pitch now triggers a **confirmation alert** using `window.confirm()`.
+- If confirmed, the player is removed from the global `Set` (`selectedPlayerSet`), allowing them to be selected again.
+- The pitch slot is also reset to its original role name (e.g., "Midfielder"), mimicking its initial appearance.
+- This allows for full team editing using only native JavaScript.
+
+### 🔗 Resources Used for This Feature
+- [`Set.delete()` – MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
+- [`window.confirm()` – MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+
+> 💬 While the implementation is not yet optimized, it works reliably across web and mobile. Plans are in place to improve efficiency and usability in the next iteration.
+
+
 ## 🧱 Player Card & Interaction
 
 - `ℹ️` info button on left side (modal coming soon)

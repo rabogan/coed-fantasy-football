@@ -85,6 +85,16 @@ fetch('player_dataset.json')
     'ATT': ['ST', 'LW', 'RW', 'CF']
   };
 
+  function permanentLabelEnabled(code) {
+    switch (code) {
+      case 'GKP': return 'Goalkeeper';
+      case 'DEF': return 'Defender';
+      case 'MID': return 'Midfielder';
+      case 'ATT': return 'Forward';
+      default: return 'Position';
+    }
+  }  
+
   // Function to build and render player entries by position
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
   function renderByPosition(allPlayers) {
@@ -155,6 +165,22 @@ function renderFlatList(players) {
 
 document.querySelectorAll('.position-slot').forEach(slot => {
   slot.addEventListener('click', () => {
+    // Wanted to avoid DRY with another X! This was the workaround: understand it
+    if (slot.classList.contains('filled')) {
+      const playerAlreadySelected = slot.textContent.trim();
+  
+      const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
+      if (confirmRemove && playerAlreadySelected) {
+        selectedPlayerSet.delete(playerAlreadySelected);
+        console.log(`Removed player from team: ${playerAlreadySelected}`);
+        const positionCode = slot.getAttribute('player-position');
+        slot.innerHTML = permanentLabelEnabled(positionCode);
+        slot.classList.remove('filled');
+      }
+  
+      return;
+    }
+
     selectedPositionSlot = slot;
   
     const popup = document.getElementById('playerListModalPopup');
@@ -164,13 +190,11 @@ document.querySelectorAll('.position-slot').forEach(slot => {
     content.innerHTML = playerList.innerHTML;
     popup.classList.remove('hidden');
   
-    // Attach listeners to each player in modal (Step 2)
     const modalPlayers = content.querySelectorAll('.player-entry');
     modalPlayers.forEach(entry => {
       entry.addEventListener('click', () => {
         const playerName = entry.querySelector('.player-name')?.textContent;
   
-        // Prevent null or duplicate selections (Step 3)
         if (!playerName || selectedPlayerSet.has(playerName)) {
           alert(`${playerName} is already on your team!`);
           return;
@@ -196,7 +220,21 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   
   slot.addEventListener('touchstart', (e) => {
     e.preventDefault(); // Prevent click after tap
-  
+
+    if (slot.classList.contains('filled')) {
+      const playerAlreadySelected = slot.textContent.trim();
+
+      const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
+      if (confirmRemove && playerAlreadySelected) {
+        selectedPlayerSet.delete(playerAlreadySelected);
+        console.log(`Removed player from team: ${playerAlreadySelected}`);
+        const positionCode = slot.getAttribute('player-position');
+        slot.innerHTML = permanentLabelEnabled(positionCode);
+        slot.classList.remove('filled');
+      }
+    return; // Exit early so modal doesn't open
+    }
+
     selectedPositionSlot = slot;
   
     const popup = document.getElementById('playerListModalPopup');
@@ -232,7 +270,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
         popup.classList.add('hidden');
       });
     });
-  });  
+  });
 });
 
 // https://www.w3schools.com/w3css/w3css_modal.asp

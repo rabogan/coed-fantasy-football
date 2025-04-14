@@ -8,15 +8,21 @@ body {
 
 /* Header */
 .main-header {
-  background: linear-gradient(to right, #00796b, #004d40);
+  background: linear-gradient(to right, #b71c1c, #8e0e0e); /* Subtle Arsenal-inspired red shades */
   padding: 1rem 0;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 .title {
-  color: #fff;
-  font-size: 4rem;
+  color: #f5f5f5; /* Softer white for better contrast */
+  font-size: 3.5rem; /* Slightly smaller for a polished look */
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+.header-author-message{
+  color: #f5f5f5;
 }
 
 /* Layout */
@@ -60,7 +66,7 @@ body {
 
 .position-slot {
   background-color: rgba(255, 255, 255, 0.15);
-  border: 2px dashed #ffffff88;
+  border: 1px dashed #ffffff88;
   border-radius: 8px;
   width: 120px;
   height: 80px;
@@ -107,6 +113,29 @@ body {
 .filters select {
   padding: 0.5rem;
   font-size: 1rem;
+}
+
+.filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background for a clean look */
+  color: #333; /* Dark text for readability */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  appearance: none; /* Remove default browser styling */
+  cursor: pointer;
+}
+
+.filters select:hover {
+  border-color: #007bff; /* Highlight border on hover */
+  background-color: #e6f0ff; /* Slightly lighter background on hover */
+}
+
+.filters select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #0056b3; /* Darker blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.5); /* Add a subtle glow effect */
 }
 
 /* Cards */
@@ -266,7 +295,7 @@ footer a:hover {
 }
 
 .modal-content {
-  background: linear-gradient(135deg, #e8f5e9, #dcedc8);
+  background: linear-gradient(135deg, #e0e7ef, #d6dee8); /* Match player list background */
   color: #333;
   padding: 1.5rem;
   border-radius: 10px;
@@ -309,15 +338,17 @@ footer a:hover {
 .slot-filled {
   width: 100%;
   height: 100%;
-  background-color: black;
-  color: white;
-  font-size: 0.75rem;
+  background-color: #FFFC00;
+  color: black;
+  font-size: 0.85rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border: 3px solid black;
+  border-radius: 10px;
   text-align: center;
+  position: relative;
 }
 
 /* Responsiveness */
@@ -356,8 +387,8 @@ footer a:hover {
   }
 
   .position-slot {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 80px;
     font-size: 0.85rem;
   }
 
