@@ -174,7 +174,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
       const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
       if (confirmRemove && playerAlreadySelected) {
         selectedPlayerSet.delete(playerAlreadySelected);
-        console.log(`Removed player from team: ${playerAlreadySelected}`);
+        checkForSixPlayersToDisplayButtons();
         const positionCode = slot.getAttribute('player-position');
         slot.innerHTML = permanentLabelEnabled(positionCode);
         slot.classList.remove('filled');
@@ -231,7 +231,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
       const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
       if (confirmRemove && playerAlreadySelected) {
         selectedPlayerSet.delete(playerAlreadySelected);
-        console.log(`Removed player from team: ${playerAlreadySelected}`);
+        checkForSixPlayersToDisplayButtons();
         const positionCode = slot.getAttribute('player-position');
         slot.innerHTML = permanentLabelEnabled(positionCode);
         slot.classList.remove('filled');
