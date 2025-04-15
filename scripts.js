@@ -171,17 +171,7 @@ function renderFlatList(players) {
 document.querySelectorAll('.position-slot').forEach(slot => {
   slot.addEventListener('click', () => {
     if (slot.classList.contains('filled')) {
-      const playerAlreadySelected = slot.textContent.trim();
-  
-      const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
-      if (confirmRemove && playerAlreadySelected) {
-        selectedPlayerSet.delete(playerAlreadySelected);
-        checkForSixPlayersToDisplayButtons();
-        const positionCode = slot.getAttribute('player-position');
-        slot.innerHTML = permanentLabelEnabled(positionCode);
-        slot.classList.remove('filled');
-      }
-  
+      removePlayerFromSlot(slot);
       return;
     }
     handlePositionSlotInteraction(slot);
@@ -191,19 +181,9 @@ document.querySelectorAll('.position-slot').forEach(slot => {
     e.preventDefault();
 
     if (slot.classList.contains('filled')) {
-      const playerAlreadySelected = slot.textContent.trim();
-
-      const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
-      if (confirmRemove && playerAlreadySelected) {
-        selectedPlayerSet.delete(playerAlreadySelected);
-        checkForSixPlayersToDisplayButtons();
-        const positionCode = slot.getAttribute('player-position');
-        slot.innerHTML = permanentLabelEnabled(positionCode);
-        slot.classList.remove('filled');
-      }
-    return;
+      removePlayerFromSlot(slot);
+      return;
     }
-
     handlePositionSlotInteraction(slot);
   });
 });
@@ -248,6 +228,19 @@ function handlePositionSlotInteraction(slot){
   });
 }
 
+function removePlayerFromSlot(slot) {
+  const playerAlreadySelected = slot.textContent.trim();
+
+  const confirmRemove = confirm(`Do you want to remove ${playerAlreadySelected} from this position?`);
+  if (confirmRemove && playerAlreadySelected) {
+    selectedPlayerSet.delete(playerAlreadySelected);
+    checkForSixPlayersToDisplayButtons();
+    const positionCode = slot.getAttribute('player-position');
+    slot.innerHTML = permanentLabelEnabled(positionCode);
+    slot.classList.remove('filled');
+  }
+}
+
 document.getElementById('closePlayerListModal').addEventListener('click', () => {
   document.getElementById('playerListModalPopup').classList.add('hidden');
   selectedPositionSlot = null;
@@ -276,7 +269,8 @@ const pitchControls = document.getElementById('pitchControls');
 const clearTeamBtn = document.getElementById('clearTeamBtn');
 
 function checkForSixPlayersToDisplayButtons() {
-  if (selectedPlayerSet.size === 6) {
+  const fullTeamSize = 6;
+  if (selectedPlayerSet.size === fullTeamSize) {
     pitchControls.classList.remove('hidden');
   } else {
     pitchControls.classList.add('hidden');
@@ -348,7 +342,6 @@ function showPlayerProfile(player) {
 
 const evaluateTeamBtn = document.getElementById('evaluateTeamBtn');
 
-// Remove magic numbers: https://medium.com/coding-beauty/avoid-magic-numbers-dcb7fff5784b
 evaluateTeamBtn.addEventListener('click', () => {
   const fullTeamSize = 6;
   if(selectedPlayerSet.size < fullTeamSize) {
