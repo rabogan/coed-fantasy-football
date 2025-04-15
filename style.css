@@ -9,7 +9,7 @@ body {
 /* Header */
 .main-header {
   background: linear-gradient(to right, #fff700, #FFFC00, #ffd700); /* Gradient around Snapchat Yellow */
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -368,6 +368,7 @@ footer a:hover {
   margin-top: 0.5rem;
 }
 
+
 /* Responsive Behavior */
 @media (max-width: 768px) {
   .player-profile-content {
@@ -494,5 +495,21 @@ footer a:hover {
   .modal-content {
     width: 90%; /* Further reduce width for very small screens */
     margin: 0 auto; /* Center horizontally */
+  }
+}
+
+.header-author-instructions {
+  display: none; /* Default: hide on all screens */
+}
+
+@media (min-width: 768px) {
+  .header-author-instructions {
+    display: block;
+    max-width: 900px;
+    margin: 0.5rem auto 1rem auto;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    color: #222;
+    text-align: center;
   }
 }

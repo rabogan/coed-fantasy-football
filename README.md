@@ -241,6 +241,25 @@ export const positionGroupMapping = { ... };
 
 > ℹ️ Built using native HTML/CSS and guided by [W3Schools Modal Guide](https://www.w3schools.com/howto/howto_css_modals.asp)
 
+### ✅ Milestone 11: Final UI Polish & Mobile Optimization
+![Update 11 - Desktop](update-11-desktop.png)
+![Update 11 - iPad](update-11-tablet.png)
+![Update 11 - Smartphone](update-11-smartphone.png)
+
+This milestone focused on **refining the visual appearance** of the entire interface across screen sizes.
+
+- Adjusted pitch and player list spacing for better vertical rhythm.
+- Polished modal dimensions, positioning, and close button spacing.
+- Refined text alignment, button contrast, and player entry spacing.
+- Ensured the design scales properly on:
+  - 📱 Smartphones
+  - 📲 Tablets (e.g., iPad)
+  - 💻 Full-size desktop screens
+
+These updates represent the **presentation-ready version** of the app. Unless an issue is discovered while testing larger datasets or additional teams, this UI will serve as the final version for showcase.
+
+> ✅ CSS was updated mostly **manually**, with attention to mobile-first design principles, dark mode compatibility, and minimal visual distractions.
+
 ### 🧱 CSS Class Features
 
 - `.player-profile-modal` and `.player-profile-content` define modal layout and styles
