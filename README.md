@@ -1,5 +1,12 @@
 # ⚽️ Co-Ed Fantasy Football Selector
 
+Most of the README, the HTML, and CSS was AI-generated. I also used ChatGPT to suggest HTML and CSS, explicitly
+avoiding any JavaScript, as is probably evident.
+
+No AI was used for JavaScript or the creation of data, although one unprompted hallucination appeared in the chat logs (which I will keep to share should I reach a later stage). It's been a pleasure coding after a long absence, and my co-ed soccer team friends are interested in using it a little in future (a shame about the hardcoding early on!)
+
+Functions are almost presented in the order they were created, with the milestones shown below.
+
 This is my personal submission for the **Snap Engineering Academy Stage 2 - Data Catalog Project**, themed around real-world football matchups and inspired by Premier League Fantasy UI design.
 
 The project uses structured player data, HTML/CSS for design, and **vanilla JavaScript** for all interactivity — in full accordance with SEA guidelines.
@@ -429,6 +436,27 @@ element.addEventListener('touchstart', (e) => {
   openModal();        // Custom function
 }, { passive: false });
 
+
+---
+
+## 🧹 Code Quality Improvements
+
+### Avoiding Magic Numbers
+
+While building the player selection and modal features, I initially used several **"magic numbers"** (e.g., hardcoded rating thresholds, pixel values, or team size limits).
+
+To improve **code readability** and **maintainability**, I'm refactoring portions of `scripts.js` to replace these with **named constants** and comments.
+
+This change aligns with best practices outlined in:
+🔗 [Avoid Magic Numbers – Coding Beauty](https://medium.com/coding-beauty/avoid-magic-numbers-dcb7fff5784b)
+
+> 📌 Example: Instead of writing `if (selectedPlayerSet.size === 6)`, I now define a constant like:
+> ```js
+> const MAX_TEAM_SIZE = 6;
+> if (selectedPlayerSet.size === MAX_TEAM_SIZE)
+> ```
+
+These improvements help clarify intent, reduce future bugs, and improve collaboration readability.
 ---
 
 ## 📄 License
