@@ -1,24 +1,14 @@
 # ⚽️ Co-Ed Fantasy Football Selector
-
-Most of the README, the HTML, and CSS was AI-generated. I also used ChatGPT to suggest HTML and CSS, explicitly
-avoiding any JavaScript, as is probably evident.
-
-No AI was used for JavaScript or the creation of data, although one unprompted hallucination appeared in the chat logs (which I will keep to share should I reach a later stage). It's been a pleasure coding after a long absence, and my co-ed soccer team friends are interested in using it a little in future (a shame about the hardcoding early on!)
-
-Functions are almost presented in the order they were created, with the milestones shown below.
-
-This is my personal submission for the **Snap Engineering Academy Stage 2 - Data Catalog Project**, themed around real-world football matchups and inspired by Premier League Fantasy UI design.
+This is my personal submission for the **Snap Engineering Academy Stage 2 - Data Catalog Project**, themed around real-world football matchups and inspired by Premier League Fantasy Football.
 
 The project uses structured player data, HTML/CSS for design, and **vanilla JavaScript** for all interactivity — in full accordance with SEA guidelines.
 
+Most of this README, the HTML, and CSS styling was AI-generated. No AI was used for the JavaScript logic or creation of data, although one unprompted hallucination appeared in the chat logs when using generative AI for HTML and CSS in ChatGPT and GitHub Copilot (sharing them will show I didn't need the unsolicted information). It's been a pleasure coding after a long absence, and I've learned a lot.
+
+Functions are presented in the order they were created, with all milestones shown below.
 ---
 
 ## 🏁 Project Setup Steps
-
-### ✅ Meta Tag for Responsiveness
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
 
 ### ✅ Step 1: Repository Creation
 - GitHub Repo: [rabogan/coed-fantasy-football](https://github.com/rabogan/coed-fantasy-football)
@@ -39,11 +29,15 @@ cd coed-fantasy-football
 
 ---
 
-## 🎨 Theme: Co-Ed Dream Team – Fantasy Football Selector
+### ✅ Step 5: Add Meta Tag for Responsiveness
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
-- Based on **Real Madrid** and **Arsenal** (Men & Women).
-- The above teams were initially hardcoded into the index.html file: with more time, I'd implement a JSON-based solution for dynamic loading of teams. No time to research this.
-- Co-ed twist + fantasy football styling.
+## 🎨 Theme: Co-Ed 6-a-side Dream Team
+
+- This week saw **Real Madrid** face **Arsenal** (Men & Women) in the Champions League. I play in a co-ed league in Long Beach, and was interested in picking a potential co-ed dream team.
+- The team names were initially hardcoded into the index.html file. With more time an JavaScript study, a JSON-based solution would allow for dynamic loading of teams, separated by league.
 - Displays a virtual pitch and sortable, filterable player list.
 
 ![Fantasy Football Website](images/fantasy-football-website.png)
@@ -242,9 +236,9 @@ export const positionGroupMapping = { ... };
 > ℹ️ Built using native HTML/CSS and guided by [W3Schools Modal Guide](https://www.w3schools.com/howto/howto_css_modals.asp)
 
 ### ✅ Milestone 11: Final UI Polish & Mobile Optimization
-![Update 11 - Desktop](update-11-desktop.png)
-![Update 11 - iPad](update-11-tablet.png)
-![Update 11 - Smartphone](update-11-smartphone.png)
+![Update 11 - Desktop](images/update-11-desktop.png)
+![Update 11 - iPad](images/update-11-tablet.png)
+![Update 11 - Smartphone](images/update-11-smartphone.png)
 
 This milestone focused on **refining the visual appearance** of the entire interface across screen sizes.
 
