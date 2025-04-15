@@ -184,44 +184,7 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   
       return;
     }
-
-    selectedPositionSlot = slot;
-  
-    const popup = document.getElementById('playerListModalPopup');
-    const content = document.getElementById('playerListPopupContent');
-    const playerList = document.getElementById('playerList');
-  
-    content.innerHTML = playerList.innerHTML;
-    popup.classList.remove('hidden');
-  
-    const modalPlayers = content.querySelectorAll('.player-entry');
-    modalPlayers.forEach(entry => {
-      entry.addEventListener('click', () => {
-        const playerName = entry.querySelector('.player-name')?.textContent;
-  
-        if (!playerName || selectedPlayerSet.has(playerName)) {
-          alert(`${playerName} is already on your team!`);
-          return;
-        }
-  
-        const filledDiv = document.createElement('div');
-        filledDiv.className = 'slot-filled';
-  
-        const nameSpan = document.createElement('span');
-        nameSpan.textContent = playerName;
-        filledDiv.appendChild(nameSpan);
-  
-        selectedPositionSlot.innerHTML = '';
-        selectedPositionSlot.appendChild(filledDiv);
-        selectedPositionSlot.classList.add('filled');
-        selectedPlayerSet.add(playerName);
-        checkForSixPlayersToDisplayButtons();
-        console.log(`Number in team: ${selectedPlayerSet.size}`);
-        console.log(`Selected player added to team: ${playerName}`);
-        selectedPositionSlot = null;
-        popup.classList.add('hidden');
-      });
-    });
+    handlePositionSlotInteraction(slot);
   });
   
   slot.addEventListener('touchstart', (e) => {
@@ -241,45 +204,49 @@ document.querySelectorAll('.position-slot').forEach(slot => {
     return;
     }
 
-    selectedPositionSlot = slot;
-  
-    const popup = document.getElementById('playerListModalPopup');
-    const content = document.getElementById('playerListPopupContent');
-    const playerList = document.getElementById('playerList');
-  
-    content.innerHTML = playerList.innerHTML;
-    popup.classList.remove('hidden');
-  
-    const modalPlayers = content.querySelectorAll('.player-entry');
-    modalPlayers.forEach(entry => {
-      entry.addEventListener('click', () => {
-        const playerName = entry.querySelector('.player-name')?.textContent;
-  
-        if (!playerName || selectedPlayerSet.has(playerName)) {
-          alert(`${playerName} is already on your team!`);
-          return;
-        }
-  
-        const filledDiv = document.createElement('div');
-        filledDiv.className = 'slot-filled';
-  
-        const nameSpan = document.createElement('span');
-        nameSpan.textContent = playerName;
-        filledDiv.appendChild(nameSpan);
-  
-        selectedPositionSlot.innerHTML = '';
-        selectedPositionSlot.appendChild(filledDiv);
-        selectedPositionSlot.classList.add('filled');
-  
-        selectedPlayerSet.add(playerName);
-        checkForSixPlayersToDisplayButtons();
-        console.log(`Number in team: ${selectedPlayerSet.size}`);
-        selectedPositionSlot = null;
-        popup.classList.add('hidden');
-      });
-    });
+    handlePositionSlotInteraction(slot);
   });
 });
+
+function handlePositionSlotInteraction(slot){
+  selectedPositionSlot = slot;
+  
+  const popup = document.getElementById('playerListModalPopup');
+  const content = document.getElementById('playerListPopupContent');
+  const playerList = document.getElementById('playerList');
+  
+  content.innerHTML = playerList.innerHTML;
+  popup.classList.remove('hidden');
+  
+  const modalPlayers = content.querySelectorAll('.player-entry');
+  modalPlayers.forEach(entry => {
+    entry.addEventListener('click', () => {
+      const playerName = entry.querySelector('.player-name')?.textContent;
+  
+      if (!playerName || selectedPlayerSet.has(playerName)) {
+        alert(`${playerName} is already on your team!`);
+        return;
+      }
+  
+      const filledDiv = document.createElement('div');
+      filledDiv.className = 'slot-filled';
+
+      const nameSpan = document.createElement('span');
+      nameSpan.textContent = playerName;
+      filledDiv.appendChild(nameSpan);
+
+      selectedPositionSlot.innerHTML = '';
+      selectedPositionSlot.appendChild(filledDiv);
+      selectedPositionSlot.classList.add('filled');
+      selectedPlayerSet.add(playerName);
+      checkForSixPlayersToDisplayButtons();
+      console.log(`Number in team: ${selectedPlayerSet.size}`);
+      console.log(`Selected player added to team: ${playerName}`);
+      selectedPositionSlot = null;
+      popup.classList.add('hidden');
+    });
+  });
+}
 
 document.getElementById('closePlayerListModal').addEventListener('click', () => {
   document.getElementById('playerListModalPopup').classList.add('hidden');
