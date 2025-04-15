@@ -357,11 +357,11 @@ evaluateTeamBtn.addEventListener('click', () => {
     const findPlayerObject = allPlayers.find(p => p.name === playerName);
     totalRating += findPlayerObject.rating;
   });
-  const averageRating = (totalRating / fullTeamSize).toFixed(DECIMAL_PLACES);
-  if (averageRating < BOTTOM_TIER_MAXIMUM) {
+  const averageRating = (totalRating / FULL_TEAM_SIZE).toFixed(DECIMAL_PLACES);
+  if (averageRating < BOTTOM_TIER_MAX) {
     alert(` Your squad has potential! Average Rating: ${averageRating}`);
     return;
-  }else if (averageRating < MID_TIER_MAXIMUM) {
+  }else if (averageRating < MID_TIER_MAX) {
     alert(`⭐️ That's a nice squad you've put together! Average Rating: ${averageRating}`);
     return;
   }
