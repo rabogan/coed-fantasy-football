@@ -103,9 +103,13 @@ fetch('player_dataset.json')
       case 'ATT': return 'Forward';
       default: return 'Position';
     }
-  }  
+  }
 
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+  const FULL_TEAM_SIZE = 6;
+  const DECIMAL_PLACES = 1;
+  const BOTTOM_TIER_MAX = 86;
+  const MID_TIER_MAX = 88;
+
   function renderByPosition(allPlayers) {
     const playerListContainer = document.getElementById('playerList');
     playerListContainer.innerHTML = '';
@@ -343,9 +347,8 @@ function showPlayerProfile(player) {
 const evaluateTeamBtn = document.getElementById('evaluateTeamBtn');
 
 evaluateTeamBtn.addEventListener('click', () => {
-  const fullTeamSize = 6;
-  if(selectedPlayerSet.size < fullTeamSize) {
-    alert(`Please select ${fullTeamSize} players!`);
+  if(selectedPlayerSet.size < FULL_TEAM_SIZE) {
+    alert(`Please select ${FULL_TEAM_SIZE} players!`);
     return;
   }
   let totalRating = 0;
@@ -354,14 +357,11 @@ evaluateTeamBtn.addEventListener('click', () => {
     const findPlayerObject = allPlayers.find(p => p.name === playerName);
     totalRating += findPlayerObject.rating;
   });
-  const decimalPlaces = 1;
-  const averageRating = (totalRating / fullTeamSize).toFixed(decimalPlaces);
-  const bottomTierMaximum = 86;
-  const midTierMaximum = 88;
-  if (averageRating < bottomTierMaximum) {
+  const averageRating = (totalRating / fullTeamSize).toFixed(DECIMAL_PLACES);
+  if (averageRating < BOTTOM_TIER_MAXIMUM) {
     alert(` Your squad has potential! Average Rating: ${averageRating}`);
     return;
-  }else if (averageRating < midTierMaximum) {
+  }else if (averageRating < MID_TIER_MAXIMUM) {
     alert(`⭐️ That's a nice squad you've put together! Average Rating: ${averageRating}`);
     return;
   }
