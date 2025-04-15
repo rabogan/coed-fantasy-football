@@ -134,31 +134,6 @@ body {
   box-shadow: 0 0 5px rgba(0, 91, 187, 0.5); /* Add a subtle glow effect */
 }
 
-/* Cards */
-.card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin: 0.5rem 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.card-content {
-  padding: 1rem;
-  color: #333;
-}
-
-.card-content h2 {
-  margin-top: 0;
-  font-size: 1.25rem;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
 .player-group-header {
   font-size: 1.1rem;
   font-weight: bold;
@@ -174,7 +149,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
   background-color: #ffffff;
   border-radius: 8px;
@@ -191,14 +166,14 @@ body {
 /* Player Name */
 .player-name {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
   flex-grow: 1;
 }
 
 /* Player Club */
 .player-club {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #777;
   margin-left: 0.5rem;
 }
@@ -234,7 +209,7 @@ body {
 .player-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-shrink: 0;
 }
 
