@@ -718,5 +718,105 @@
     "player_image":"steph-catley.jpg",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:AusChi3_-_Catley3_(51556665199).jpg",
     "image_credit":"LittleBlinky, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
+  },
+  {
+    "name":"Aldo Moreno",
+    "position":"CDM",
+    "rating":83,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":33,
+    "player_image":"aldo-moreno.jpg"
+  },
+  {
+    "name":"Angel Chinchilla",
+    "position":"GK",
+    "rating":82,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":28,
+    "player_image":"angel-chinchilla.jpg"
+  },
+  {
+    "name":"Bobby Bogan",
+    "position":"CAM",
+    "rating":83,
+    "nationality":"Republic of Ireland",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":39,
+    "player_image":"bobby-bogan.jpg"
+  },
+  {
+    "name":"Derek Shepard",
+    "position":"CDM",
+    "rating":83,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":40,
+    "player_image":"derek-shepard.jpg"
+  },
+  {
+    "name":"Francisco",
+    "position":"CB",
+    "rating":83,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":26,
+    "player_image":"francisco.jpg"
+  },
+  {
+    "name":"Andrew Anderson",
+    "position":"GK",
+    "rating":83,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":24,
+    "player_image":"andrew-anderson.jpg"
+  },
+  {
+    "name":"Kasey",
+    "position":"ST",
+    "rating":90,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"female",
+    "age":30,
+    "player_image":"kasey.jpg"
+  },
+  {
+    "name":"Lupe",
+    "position":"ST",
+    "rating":86,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"female",
+    "age":25,
+    "player_image":"lupe.jpg"
+  },
+  {
+    "name":"Erica",
+    "position":"RM",
+    "rating":86,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"female",
+    "age":25,
+    "player_image":"erica.jpg"
+  },
+  {
+    "name":"Maria",
+    "position":"LM",
+    "rating":86,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"female",
+    "age":30,
+    "player_image":"maria.jpg"
   }
 ]

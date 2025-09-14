@@ -75,6 +75,7 @@ fetch('player_dataset.json')
 
   // Map the clubs to their full names. As mentioned later, hardcoding the teams in the HTML was a mistake.
   const clubMapping = {
+    'SV': 'Salsa Verde',
     'RM': 'Real Madrid',
     'RM W': 'Real Madrid W',
     'ARS': 'Arsenal',
