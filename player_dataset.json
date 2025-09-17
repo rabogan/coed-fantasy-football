@@ -720,9 +720,9 @@
     "image_credit":"LittleBlinky, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
-    "name":"Aldo Moreno",
+    "name":"Aldo M",
     "position":"CDM",
-    "rating":83,
+    "rating":92,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -730,9 +730,9 @@
     "player_image":"aldo-moreno.jpg"
   },
   {
-    "name":"Angel Chinchilla",
+    "name":"Angel C",
     "position":"GK",
-    "rating":82,
+    "rating":87,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -740,7 +740,7 @@
     "player_image":"angel-chinchilla.jpg"
   },
   {
-    "name":"Bobby Bogan",
+    "name":"Bobby",
     "position":"CAM",
     "rating":83,
     "nationality":"Republic of Ireland",
@@ -750,9 +750,9 @@
     "player_image":"bobby-bogan.jpg"
   },
   {
-    "name":"Derek Shepard",
+    "name":"Derek S",
     "position":"CDM",
-    "rating":83,
+    "rating":88,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -762,7 +762,7 @@
   {
     "name":"Francisco",
     "position":"CB",
-    "rating":83,
+    "rating":84,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -770,9 +770,9 @@
     "player_image":"francisco.jpg"
   },
   {
-    "name":"Andrew Anderson",
+    "name":"Andrew A",
     "position":"GK",
-    "rating":83,
+    "rating":84,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -780,9 +780,29 @@
     "player_image":"andrew-anderson.jpg"
   },
   {
-    "name":"Kasey",
+    "name":"Sebastian",
     "position":"ST",
     "rating":90,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":29,
+    "player_image":"sebastian.jpg"
+  },
+  {
+    "name":"Angel M",
+    "position":"RW",
+    "rating":88,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":29,
+    "player_image":"angel-m.jpg"
+  },
+  {
+    "name":"Kasey",
+    "position":"ST",
+    "rating":97,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"female",
@@ -792,7 +812,7 @@
   {
     "name":"Lupe",
     "position":"ST",
-    "rating":86,
+    "rating":94,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"female",
