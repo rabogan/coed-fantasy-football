@@ -720,6 +720,16 @@
     "image_credit":"LittleBlinky, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
+    "name":"Alonso",
+    "position":"GK",
+    "rating":99,
+    "nationality":"USA",
+    "club":"Salsa Verde",
+    "gender":"male",
+    "age":??,
+    "player_image":"thibaut-courtois.jpg"
+  },
+  {
     "name":"Aldo M",
     "position":"CDM",
     "rating":92,
@@ -732,7 +742,7 @@
   {
     "name":"Angel C",
     "position":"GK",
-    "rating":87,
+    "rating":69,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"male",
@@ -761,7 +771,7 @@
   },
   {
     "name":"Francisco",
-    "position":"CB",
+    "position":"CM",
     "rating":84,
     "nationality":"USA",
     "club":"Salsa Verde",
@@ -778,26 +788,6 @@
     "gender":"male",
     "age":24,
     "player_image":"andrew-anderson.jpg"
-  },
-  {
-    "name":"Sebastian",
-    "position":"ST",
-    "rating":90,
-    "nationality":"USA",
-    "club":"Salsa Verde",
-    "gender":"male",
-    "age":29,
-    "player_image":"sebastian.jpg"
-  },
-  {
-    "name":"Angel M",
-    "position":"RW",
-    "rating":88,
-    "nationality":"USA",
-    "club":"Salsa Verde",
-    "gender":"male",
-    "age":29,
-    "player_image":"angel-m.jpg"
   },
   {
     "name":"Kasey",
@@ -831,7 +821,7 @@
   },
   {
     "name":"Maria",
-    "position":"LM",
+    "position":"CB",
     "rating":86,
     "nationality":"USA",
     "club":"Salsa Verde",
