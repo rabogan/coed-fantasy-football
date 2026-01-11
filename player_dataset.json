@@ -770,7 +770,7 @@
     "player_image":"derek-shepard.jpg"
   },
   {
-    "name":"Francisco",
+    "name":"Angel",
     "position":"CM",
     "rating":84,
     "nationality":"USA",
@@ -790,7 +790,7 @@
     "player_image":"andrew-anderson.jpg"
   },
   {
-    "name":"Kasey",
+    "name":"Sebastian",
     "position":"ST",
     "rating":97,
     "nationality":"USA",
@@ -810,14 +810,14 @@
     "player_image":"lupe.jpg"
   },
   {
-    "name":"Erica",
+    "name":"Isela",
     "position":"RM",
     "rating":86,
     "nationality":"USA",
     "club":"Salsa Verde",
     "gender":"female",
     "age":25,
-    "player_image":"erica.jpg"
+    "player_image":""
   },
   {
     "name":"Maria",
