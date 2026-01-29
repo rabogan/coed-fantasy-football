@@ -93,7 +93,7 @@ fetch('player_dataset.json')
     'GKP': ['GK'],
     'DEF': ['CB', 'LB', 'RB'],
     'MID': ['CDM', 'CM', 'CAM', 'LM', 'RM'],
-    'ATT': ['ST', 'LW', 'RW', 'CF']
+    'ATT': ['ST', 'LW', 'RW', 'CF', 'REF']
   };
 
   function permanentLabelEnabled(code) {
@@ -139,29 +139,24 @@ document.getElementById('playerFilterDropdown').addEventListener('change', (e) =
   if (selected === 'all') {
     renderByPosition(allPlayers);
     return;
-  }
-
-  // Hardcoding the teams was a TIME-BASED decision
-  if (selected in clubMapping) {
+  } else if (selected in clubMapping) {
     const matchingTeam = clubMapping[selected];
-    const filtered = allPlayers.filter(p => p.club === matchingTeam);
-    renderFlatList(filtered);
-  }
-
-  if (selected in genderMapping) {
+    renderFlatList(allPlayers.filter(p => p.club === matchingTeam));
+    return;
+  } else if (selected in genderMapping) {
     const targetGender = genderMapping[selected];
-    const filtered = allPlayers.filter(p => p.gender === targetGender);
-    renderFlatList(filtered);
+    renderFlatList(allPlayers.filter(p => p.gender === targetGender));
+    return;
+  } else if (selected in positionGroupMapping) {
+    const positions = positionGroupMapping[selected];
+    renderFlatList(allPlayers.filter(p => positions.includes(p.position)));
     return;
   }
 
-  if (selected in positionGroupMapping) {
-    const positions = positionGroupMapping[selected];
-    const filtered = allPlayers.filter(p => positions.includes(p.position));
-    renderFlatList(filtered);
-    return;
-  }
+  // fallback (optional)
+  renderByPosition(allPlayers);
 });
+
 
 function renderFlatList(players) {
   const playerListContainer = document.getElementById('playerList');
