@@ -720,41 +720,51 @@
     "image_credit":"LittleBlinky, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
+    "name":"Kio",
+    "position":"GK",
+    "rating":85,
+    "nationality":"USA",
+    "club":"Habanero Salsa",
+    "gender":"male",
+    "age":26,
+    "player_image":"david-raya.jpg"
+  },
+  {
     "name":"Alonso",
     "position":"GK",
-    "rating":99,
-    "nationality":"USA",
-    "club":"Salsa Verde",
+    "rating":83,
+    "nationality":"Mexico",
+    "club":"Habanero Salsa",
     "gender":"male",
-    "age":45,
+    "age":55,
     "player_image":"thibaut-courtois.jpg"
   },
   {
     "name":"Aldo M",
     "position":"CDM",
-    "rating":92,
+    "rating":89,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"male",
-    "age":33,
+    "age":34,
     "player_image":"aldo-moreno.jpg"
   },
   {
     "name":"Angel C",
     "position":"GK",
-    "rating":69,
+    "rating":86,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"male",
-    "age":28,
+    "age":29,
     "player_image":"angel-chinchilla.jpg"
   },
   {
     "name":"Bobby",
     "position":"CAM",
-    "rating":83,
+    "rating":84,
     "nationality":"Republic of Ireland",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"male",
     "age":39,
     "player_image":"bobby-bogan.jpg"
@@ -762,29 +772,19 @@
   {
     "name":"Derek S",
     "position":"CDM",
-    "rating":88,
+    "rating":86,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"male",
-    "age":40,
+    "age":41,
     "player_image":"derek-shepard.jpg"
-  },
-  {
-    "name":"Angel",
-    "position":"CM",
-    "rating":84,
-    "nationality":"USA",
-    "club":"Salsa Verde",
-    "gender":"male",
-    "age":26,
-    "player_image":"francisco.jpg"
   },
   {
     "name":"Andrew A",
     "position":"GK",
     "rating":84,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"male",
     "age":24,
     "player_image":"andrew-anderson.jpg"
@@ -794,17 +794,17 @@
     "position":"ST",
     "rating":97,
     "nationality":"USA",
-    "club":"Salsa Verde",
-    "gender":"female",
-    "age":30,
-    "player_image":"kasey.jpg"
+    "club":"Habanero Salsa",
+    "gender":"male",
+    "age":26,
+    "player_image":"sebastian.jpg"
   },
   {
     "name":"Lupe",
-    "position":"ST",
-    "rating":94,
+    "position":"CDM",
+    "rating":90,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"female",
     "age":25,
     "player_image":"lupe.jpg"
@@ -814,7 +814,7 @@
     "position":"RM",
     "rating":86,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"female",
     "age":25,
     "player_image":""
@@ -824,9 +824,19 @@
     "position":"CB",
     "rating":86,
     "nationality":"USA",
-    "club":"Salsa Verde",
+    "club":"Habanero Salsa",
     "gender":"female",
-    "age":30,
+    "age":25,
     "player_image":"maria.jpg"
-  }
+  },
+  {
+    "name":"Jazmine",
+    "position":"RM",
+    "rating":84,
+    "nationality":"USA",
+    "club":"Habanero Salsa",
+    "gender":"female",
+    "age":23,
+    "player_image":""
+  },
 ]
