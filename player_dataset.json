@@ -498,7 +498,7 @@
     "nationality":"Mexico",
     "club":"Habanero Salsa",
     "gender":"male",
-    "age":26,
+    "age":36,
     "player_image":"david-raya.jpg"
   },
   {
@@ -508,7 +508,7 @@
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"male",
-    "age":34,
+    "age":35,
     "player_image":"aldo-moreno.jpg"
   },
   {
@@ -523,12 +523,12 @@
   },
   {
     "name":"Bobby B",
-    "position":"CAM",
+    "position":"ST",
     "rating":84,
     "nationality":"Republic of Ireland",
     "club":"Habanero Salsa",
     "gender":"male",
-    "age":39,
+    "age":40,
     "player_image":"bobby-bogan.jpg"
   },
   {
@@ -552,7 +552,7 @@
     "player_image":"bukayo-saka.jpg"
   },
   {
-    "name":"Lupe",
+    "name":"Lupe A",
     "position":"CDM",
     "rating":90,
     "nationality":"USA",
@@ -572,7 +572,7 @@
     "player_image":"jude-bellingham.jpg"
   },
   {
-    "name":"Maria",
+    "name":"Maria A",
     "position":"CB",
     "rating":86,
     "nationality":"USA",
@@ -582,9 +582,9 @@
     "player_image":"maria.jpg"
   },
   {
-    "name":"Jazmin",
+    "name":"Jazmine L",
     "position":"ST",
-    "rating":84,
+    "rating":85,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
