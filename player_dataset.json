@@ -84,42 +84,6 @@
     "image_credit":"Real Madrid, CC BY 3.0 <https:\/\/creativecommons.org\/licenses\/by\/3.0>, via Wikimedia Commons"
   },
   {
-    "name":"Luka Modri\u0107",
-    "position":"CM",
-    "rating":86,
-    "nationality":"Croatia",
-    "club":"Real Madrid",
-    "gender":"male",
-    "age":39,
-    "player_image":"luka-modric.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Luka_Modric_2015.jpg",
-    "image_credit":"Football.ua, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
-  },
-  {
-    "name":"Carvajal",
-    "position":"RB",
-    "rating":86,
-    "nationality":"Spain",
-    "club":"Real Madrid",
-    "gender":"male",
-    "age":32,
-    "player_image":"carvajal.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:UEFA_EURO_qualifiers_Sweden_vs_Spain_20191015_Dani_Carvajal_10.jpg",
-    "image_credit":"Rolandhino1, CC BY-SA 4.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/4.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"David Alaba",
-    "position":"CB",
-    "rating":85,
-    "nationality":"Austria",
-    "club":"Real Madrid",
-    "gender":"male",
-    "age":32,
-    "player_image":"david-alaba.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:David_Alaba_9004.JPG",
-    "image_credit":"Ailura, CC BY-SA 3.0 AT <https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/at\/deed.en>, via Wikimedia Commons"
-  },
-  {
     "name":"\u00c9der Milit\u00e3o",
     "position":"CB",
     "rating":85,
@@ -192,18 +156,6 @@
     "image_credit":"Football.ua, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
   },
   {
-    "name":"Lucas V\u00e1zquez",
-    "position":"RB",
-    "rating":81,
-    "nationality":"Spain",
-    "club":"Real Madrid",
-    "gender":"male",
-    "age":33,
-    "player_image":"lucas-vazquez.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:CSKA-RM18_(6).jpg",
-    "image_credit":"\u0410\u043d\u0442\u043e\u043d \u0417\u0430\u0439\u0446\u0435\u0432, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
-  },
-  {
     "name":"Dani Ceballos",
     "position":"CM",
     "rating":79,
@@ -271,7 +223,7 @@
     "club":"Arsenal",
     "gender":"male",
     "age":23,
-    "player_image":"bukayo-saka.jpg",
+    "player_image":"c",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Bukayo_Saka.jpg",
     "image_credit":"Tasnim News Agency, CC BY 4.0 <https:\/\/creativecommons.org\/licenses\/by\/4.0>, via Wikimedia Commons"
   },
@@ -336,18 +288,6 @@
     "image_credit":"Steffen Pr\u00f6\u00dfdorf, CC BY-SA 4.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/4.0>, via Wikimedia Commons"
   },
   {
-    "name":"Gabriel Martinelli",
-    "position":"LW",
-    "rating":83,
-    "nationality":"Brazil",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":23,
-    "player_image":"gabriel-martinelli.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:POST-CARD-MONTAGEM-gabriel-martinelli_(cropped).png",
-    "image_credit":"SOCCER DIGITAL, CC BY-SA 4.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/4.0>, via Wikimedia Commons"
-  },
-  {
     "name":"David Raya",
     "position":"GK",
     "rating":83,
@@ -358,78 +298,6 @@
     "player_image":"david-raya.jpg",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:RC_Lens_-_Arsenal_FC_(03-10-2023)_21.jpg",
     "image_credit":"Supporterh\u00e9ninois, CC0, via Wikimedia Commons"
-  },
-  {
-    "name":"Leandro Trossard",
-    "position":"LW",
-    "rating":83,
-    "nationality":"Belgium",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":29,
-    "player_image":"leandro-trossard.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:RC_Lens_-_Arsenal_FC_(03-10-2023)_26_(cropped).jpg",
-    "image_credit":"Supporterh\u00e9ninois, CC0, via Wikimedia Commons"
-  },
-  {
-    "name":"Gabriel Jesus",
-    "position":"ST",
-    "rating":82,
-    "nationality":"Brazil",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":27,
-    "player_image":"gabriel-jesus.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Gabriel_Jesus_850_1688.jpg",
-    "image_credit":"Granada, CC BY-SA 4.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/4.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Jorginho",
-    "position":"CDM",
-    "rating":82,
-    "nationality":"Italy",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":32,
-    "player_image":"jorginho.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Chelsea_0_Valencia_1_(48768868096).jpg",
-    "image_credit":"@cfcunofficial (Chelsea Debs) London from London, UK, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Thomas Partey",
-    "position":"CDM",
-    "rating":82,
-    "nationality":"Ghana",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":31,
-    "player_image":"thomas-partey.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Loko-AM2018_(10).jpg",
-    "image_credit":"\u0410\u043d\u0442\u043e\u043d \u0417\u0430\u0439\u0446\u0435\u0432, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
-  },
-  {
-    "name":"Raheem Sterling",
-    "position":"LM",
-    "rating":81,
-    "nationality":"England",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":29,
-    "player_image":"raheem-sterling.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Raheem_Sterling_2018.jpg",
-    "image_credit":"\u0410\u043d\u0442\u043e\u043d \u0417\u0430\u0439\u0446\u0435\u0432, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
-  },
-  {
-    "name":"Kieran Tierney",
-    "position":"LB",
-    "rating":79,
-    "nationality":"Scotland",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":27,
-    "player_image":"kieran-tierney.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Kieran_Tierney_(26938128442)_(cropped).jpg",
-    "image_credit":"Graham, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
     "name":"Jurri\u00ebn Timber",
@@ -444,18 +312,6 @@
     "image_credit":"Carlo Bruil Fotografie, CC BY 2.0 <https:\/\/creativecommons.org\/licenses\/by\/2.0>, via Wikimedia Commons"
   },
   {
-    "name":"Oleksandr Zinchenko",
-    "position":"LB",
-    "rating":79,
-    "nationality":"Ukraine",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":27,
-    "player_image":"oleksandr-zinchenko.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Oleksandr_Zinchenko_2015.jpg",
-    "image_credit":"http:\/\/www.soccer.ru\/galery\/600697\/photo\/443238, CC BY-SA 3.0 GFDL, via Wikimedia Commons"
-  },
-  {
     "name":"Riccardo Calafiori",
     "position":"CB",
     "rating":78,
@@ -468,18 +324,6 @@
     "image_credit":"Timmy96, CC0, via Wikimedia Commons"
   },
   {
-    "name":"Neto",
-    "position":"GK",
-    "rating":78,
-    "nationality":"Brazil",
-    "club":"Arsenal",
-    "gender":"male",
-    "age":35,
-    "player_image":"neto.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:FC_Red_Bull_Salzburg_gegen_CF_Barcelona_(Testspiel_4._August_2021)_64.jpg",
-    "image_credit":"Werner100359, CC0, via Wikimedia Commons"
-  },
-  {
     "name":"Alba Redondo",
     "position":"ST",
     "rating":84,
@@ -490,18 +334,6 @@
     "player_image":"alba-redondo.jpg",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Alba_Redondo_(cropped).jpg",
     "image_credit":"European Parliament, CC BY 2.0 <https:\/\/creativecommons.org\/licenses\/by\/2.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Caroline Weir",
-    "position":"CAM",
-    "rating":84,
-    "nationality":"Scotland",
-    "club":"Real Madrid W",
-    "gender":"female",
-    "age":29,
-    "player_image":"caroline-weir.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:20170719_WEURO_ENG_SCO_6100.jpg",
-    "image_credit":"Ailura, CC BY-SA 3.0 AT, CC BY-SA 3.0 AT <https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/at\/deed.en>, via Wikimedia Commons"
   },
   {
     "name":"Olga Carmona",
@@ -550,30 +382,6 @@
     "player_image":"misa.jpg",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Misa_Rodriguez_2021_(2).jpg",
     "image_credit":"Real Madrid, CC BY 3.0 <https:\/\/creativecommons.org\/licenses\/by\/3.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Melanie Leupolz",
-    "position":"CDM",
-    "rating":81,
-    "nationality":"Germany",
-    "club":"Real Madrid W",
-    "gender":"female",
-    "age":30,
-    "player_image":"melanie-leupolz.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Melanie_Leupolz_2013_2.jpg",
-    "image_credit":"Thomas Rodenb\u00fccher, CC BY 2.0 <https:\/\/creativecommons.org\/licenses\/by\/2.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Sandie Toletti",
-    "position":"CM",
-    "rating":81,
-    "nationality":"France",
-    "club":"Real Madrid W",
-    "gender":"female",
-    "age":29,
-    "player_image":"sandie-toletti.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:20131031_FR20_Sandie_Toletti_8835.jpg",
-    "image_credit":"Ailura, CC BY-SA 3.0 AT, CC BY-SA 3.0 AT <https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/at\/deed.en>, via Wikimedia Commons"
   },
   {
     "name":"Tere Abelleira",
@@ -636,18 +444,6 @@
     "image_credit":"Suzanne Lycett, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
-    "name":"Katie McCabe",
-    "position":"LB",
-    "rating":85,
-    "nationality":"Republic of Ireland",
-    "club":"Arsenal W",
-    "gender":"female",
-    "age":28,
-    "player_image":"katie-mccabe.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:McCabe_Arsenal.jpg",
-    "image_credit":"Suzanne Lycett, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
-  },
-  {
     "name":"Alessia Russo",
     "position":"ST",
     "rating":85,
@@ -672,18 +468,6 @@
     "image_credit":"El Loko Foto, CC BY 4.0 <https:\/\/creativecommons.org\/licenses\/by\/4.0>, via Wikimedia Commons"
   },
   {
-    "name":"Mariona",
-    "position":"LW",
-    "rating":84,
-    "nationality":"Spain",
-    "club":"Arsenal W",
-    "gender":"female",
-    "age":28,
-    "player_image":"mariona.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Brann_-_Bar%C3%A7a_Femen%C3%AD_CG3A5801.jpg",
-    "image_credit":"MichaelEmilio, CC BY-SA 4.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/4.0>, via Wikimedia Commons"
-  },
-  {
     "name":"Amanda Ilestedt",
     "position":"CB",
     "rating":84,
@@ -694,18 +478,6 @@
     "player_image":"amanda-ilestedt.jpg",
     "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:Amandailestedt_arsenal_home.jpg",
     "image_credit":"Suzanne Lycett, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
-  },
-  {
-    "name":"Manuela Zinsberger",
-    "position":"GK",
-    "rating":84,
-    "nationality":"Austria",
-    "club":"Arsenal W",
-    "gender":"female",
-    "age":28,
-    "player_image":"manuela-zinsberger.jpg",
-    "image_source_url":"https:\/\/commons.wikimedia.org\/wiki\/File:20131031_AT01_Manuela_Zinsberger_(cropped).jpg",
-    "image_credit":"20131031_Gruppenbild_AT_8884.jpg: Ailuraderivative work: ElRaki, CC BY-SA 3.0 AT <https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/at\/deed.en>, via Wikimedia Commons"
   },
   {
     "name":"Steph Catley",
@@ -720,24 +492,14 @@
     "image_credit":"LittleBlinky, CC BY-SA 2.0 <https:\/\/creativecommons.org\/licenses\/by-sa\/2.0>, via Wikimedia Commons"
   },
   {
-    "name":"Kio",
+    "name":"Koi",
     "position":"GK",
-    "rating":85,
-    "nationality":"USA",
+    "rating":90,
+    "nationality":"Mexico",
     "club":"Habanero Salsa",
     "gender":"male",
     "age":26,
     "player_image":"david-raya.jpg"
-  },
-  {
-    "name":"Alonso",
-    "position":"GK",
-    "rating":83,
-    "nationality":"Mexico",
-    "club":"Habanero Salsa",
-    "gender":"male",
-    "age":55,
-    "player_image":"thibaut-courtois.jpg"
   },
   {
     "name":"Aldo M",
@@ -760,7 +522,7 @@
     "player_image":"angel-chinchilla.jpg"
   },
   {
-    "name":"Bobby",
+    "name":"Bobby B",
     "position":"CAM",
     "rating":84,
     "nationality":"Republic of Ireland",
@@ -780,24 +542,14 @@
     "player_image":"derek-shepard.jpg"
   },
   {
-    "name":"Andrew A",
-    "position":"GK",
-    "rating":84,
-    "nationality":"USA",
+    "name":"Eddie H",
+    "position":"CAM",
+    "rating":89,
+    "nationality":"Mexico",
     "club":"Habanero Salsa",
     "gender":"male",
-    "age":24,
-    "player_image":"andrew-anderson.jpg"
-  },
-  {
-    "name":"Sebastian",
-    "position":"ST",
-    "rating":97,
-    "nationality":"USA",
-    "club":"Habanero Salsa",
-    "gender":"male",
-    "age":26,
-    "player_image":"sebastian.jpg"
+    "age":28,
+    "player_image":"bukayo-saka.jpg"
   },
   {
     "name":"Lupe",
@@ -817,7 +569,7 @@
     "club":"Habanero Salsa",
     "gender":"female",
     "age":25,
-    "player_image":""
+    "player_image":"jude-bellingham.jpg"
   },
   {
     "name":"Maria",
@@ -830,13 +582,133 @@
     "player_image":"maria.jpg"
   },
   {
-    "name":"Jazmine",
-    "position":"RM",
+    "name":"Jazmin",
+    "position":"ST",
     "rating":84,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
     "age":23,
-    "player_image":""
+    "player_image":"kai-havertz.jpg"
+  },
+  {
+    "name":"Shelsin",
+    "position":"ST",
+    "rating":97,
+    "nationality":"USA",
+    "club":"Habanero Salsa",
+    "gender":"female",
+    "age":24,
+    "player_image":"kylian-mbappe.jpg"
+  },
+  {
+    "name":"Aldo M",
+    "position":"CDM",
+    "rating":89,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":36,
+    "player_image":"aldo-moreno.jpg"
+  },
+  {
+    "name":"Alex M",
+    "position":"CAM",
+    "rating":90,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":35,
+    "player_image":"vini-jr.jpg"
+  },
+  {
+    "name":"Angel C",
+    "position":"GK",
+    "rating":86,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":29,
+    "player_image":"angel-chinchilla.jpg"
+  },
+  {
+    "name":"Bobby B",
+    "position":"CAM",
+    "rating":84,
+    "nationality":"Republic of Ireland",
+    "club":""Salsa FC",
+    "gender":"male",
+    "age":40,
+    "player_image":"bobby-bogan.jpg"
+  },
+  {
+    "name":"Derek S",
+    "position":"CDM",
+    "rating":86,
+    "nationality":"USA",
+    "club":""Salsa FC",
+    "gender":"male",
+    "age":41,
+    "player_image":"derek-shepard.jpg"
+  },
+  {
+    "name":"Eddie H",
+    "position":"CAM",
+    "rating":89,
+    "nationality":"Mexico",
+    "club":"Habanero Salsa",
+    "gender":"male",
+    "age":28,
+    "player_image":"bukayo-saka.jpg"
+  },
+  {
+    "name":"Eric M",
+    "position":"CB",
+    "rating":90,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":38,
+    "player_image":"william-saliba.jpg"
+  },
+  {
+    "name":"Francisco C",
+    "position":"CAM",
+    "rating":88,
+    "nationality":"Mexico",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":27,
+    "player_image":"declan-rice.jpg"
+  },
+  {
+    "name":"Hugo D",
+    "position":"CAM",
+    "rating":69,
+    "nationality":"Peru",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":37,
+    "player_image":"teofilo-cubillas.jpg"
+  },
+  {
+    "name":"Joe Martinez",
+    "position":"CB",
+    "rating":87,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":34,
+    "player_image":"gabriel.jpg"
+  },
+  {
+    "name":"Kevvin Metz",
+    "position":"RM",
+    "rating":87,
+    "nationality":"USA",
+    "club":"Salsa FC",
+    "gender":"male",
+    "age":26,
+    "player_image":"bukayo-saka.jpg"
   }
 ]
