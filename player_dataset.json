@@ -494,7 +494,7 @@
   {
     "name":"Koi",
     "position":"GK",
-    "rating":90,
+    "rating":99,
     "nationality":"Mexico",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -504,7 +504,7 @@
   {
     "name":"Aldo M",
     "position":"CDM",
-    "rating":89,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -514,7 +514,7 @@
   {
     "name":"Angel C",
     "position":"GK",
-    "rating":86,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -524,7 +524,7 @@
   {
     "name":"Bobby B",
     "position":"ST",
-    "rating":84,
+    "rating":40,
     "nationality":"Republic of Ireland",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -534,7 +534,7 @@
   {
     "name":"Derek S",
     "position":"CDM",
-    "rating":86,
+    "rating":41,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -544,7 +544,7 @@
   {
     "name":"Eddie H",
     "position":"CAM",
-    "rating":89,
+    "rating":99,
     "nationality":"Mexico",
     "club":"Habanero Salsa",
     "gender":"male",
@@ -554,7 +554,7 @@
   {
     "name":"Lupe A",
     "position":"CDM",
-    "rating":90,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
@@ -564,7 +564,7 @@
   {
     "name":"Isela",
     "position":"RM",
-    "rating":86,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
@@ -574,7 +574,7 @@
   {
     "name":"Maria A",
     "position":"CB",
-    "rating":86,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
@@ -584,7 +584,7 @@
   {
     "name":"Jazmine L",
     "position":"ST",
-    "rating":85,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
@@ -594,7 +594,7 @@
   {
     "name":"Shelsin",
     "position":"ST",
-    "rating":97,
+    "rating":99,
     "nationality":"USA",
     "club":"Habanero Salsa",
     "gender":"female",
@@ -604,7 +604,7 @@
   {
     "name":"Aldo M",
     "position":"CDM",
-    "rating":89,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -614,7 +614,7 @@
   {
     "name":"Alex R",
     "position":"CAM",
-    "rating":90,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -624,7 +624,7 @@
   {
     "name":"Angel C",
     "position":"GK",
-    "rating":86,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -634,7 +634,7 @@
   {
     "name":"Bobby B",
     "position":"CAM",
-    "rating":84,
+    "rating":40,
     "nationality":"Republic of Ireland",
     "club":"Salsa FC",
     "gender":"male",
@@ -644,7 +644,7 @@
   {
     "name":"Derek S",
     "position":"CDM",
-    "rating":86,
+    "rating":41,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -654,7 +654,7 @@
   {
     "name":"Eddie H",
     "position":"CAM",
-    "rating":89,
+    "rating":99,
     "nationality":"Mexico",
     "club":"Salsa FC",
     "gender":"male",
@@ -664,7 +664,7 @@
   {
     "name":"Eric R",
     "position":"CB",
-    "rating":90,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -674,7 +674,7 @@
   {
     "name":"Francisco C",
     "position":"CAM",
-    "rating":88,
+    "rating":99,
     "nationality":"Mexico",
     "club":"Salsa FC",
     "gender":"male",
@@ -694,7 +694,7 @@
   {
     "name":"Joe M",
     "position":"CB",
-    "rating":87,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
@@ -704,7 +704,7 @@
   {
     "name":"Kevvin M",
     "position":"RM",
-    "rating":87,
+    "rating":99,
     "nationality":"USA",
     "club":"Salsa FC",
     "gender":"male",
