@@ -189,6 +189,35 @@ document.querySelectorAll('.position-slot').forEach(slot => {
   });
 });
 
+// Keep the same six slot nodes and listeners when changing formation.
+// Stable order: goalkeeper, two defensive slots, midfield, two forward slots.
+const formationSlots = Array.from(document.querySelectorAll('.position-slot'));
+const formationLayouts = {
+  '2-1-2': { GKP: [0], DEF: [1, 2], MID: [3], ATT: [4, 5] },
+  '1-3-1': { GKP: [0], DEF: [1], MID: [2, 3, 4], ATT: [5] },
+  '2-2-1': { GKP: [0], DEF: [1, 2], MID: [3, 4], ATT: [5] }
+};
+
+document.getElementById('formationSelect').addEventListener('change', (event) => {
+  const layout = formationLayouts[event.target.value];
+  if (!layout) return;
+
+  selectedPositionSlot = null;
+  document.getElementById('playerListModalPopup').classList.add('hidden');
+
+  for (const [position, indices] of Object.entries(layout)) {
+    const row = document.querySelector(`.position-row[data-row="${position}"]`);
+    for (const index of indices) {
+      const slot = formationSlots[index];
+      slot.setAttribute('player-position', position);
+      if (!slot.classList.contains('filled')) {
+        slot.textContent = permanentLabelEnabled(position);
+      }
+      row.appendChild(slot);
+    }
+  }
+});
+
 function handlePositionSlotInteraction(slot){
   selectedPositionSlot = slot;
   
