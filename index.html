@@ -13,27 +13,36 @@
     <header class="main-header">
       <h1 class="title">Snap Decisions</h1>
       <p class="header-author-message">
-        Create the right set from an objectively stacked array! <a href="https://github.com/rabogan/coed-fantasy-football" target="_blank" rel="noopener noreferrer">README</a>
+        Need to update Vini Jr's picture (and player rating)! <a href="https://github.com/rabogan/coed-fantasy-football" target="_blank" rel="noopener noreferrer">README</a>
       </p>
         <p class="header-author-instructions">
-          ⚽ Click an empty position and then build your team. Use ℹ️ for player profiles (right menu only)
+          ⚽ Click an empty position and then build your team. Use ℹ️ for player profiles
       </p>
     </header>
 
     <main class="main-container">
       <section class="pitch-panel">
+        <div class="formation-controls">
+          <label for="formationSelect">Formation</label>
+          <select id="formationSelect" aria-describedby="formationHelp">
+            <option value="2-1-2">2-1-2</option>
+            <option value="1-3-1">1-3-1</option>
+            <option value="2-2-1">2-2-1</option>
+          </select>
+          <p id="formationHelp">Switch formation without clearing your team. Goalkeeper stays in goal.</p>
+        </div>
         <div class="pitch">
-          <div class="position-row">
+          <div class="position-row" data-row="GKP">
             <div class="position-slot" player-position="GKP">Goalkeeper</div>
           </div>
-          <div class="position-row">
+          <div class="position-row" data-row="DEF">
             <div class="position-slot" player-position="DEF">Defender</div>
             <div class="position-slot" player-position="DEF">Defender</div>
           </div>
-          <div class="position-row">
+          <div class="position-row" data-row="MID">
             <div class="position-slot" player-position="MID">Midfielder</div>
           </div>
-          <div class="position-row">
+          <div class="position-row" data-row="ATT">
             <div class="position-slot" player-position="ATT">Forward</div>
             <div class="position-slot" player-position="ATT">Forward</div>
           </div>
@@ -49,7 +58,7 @@
           <select id="playerFilterDropdown">
             <option value="all">All Players</option>
             <optgroup label="By Team">
-              <option value="SFC">Salsa FC</option>
+              <option value="SFC" selected>Salsa FC</option>
               <option value="HS">Habanero Salsa</option>
               <option value="RM">Real Madrid</option>
               <option value="RM W">Real Madrid Women</option>
@@ -103,6 +112,6 @@
         </a>
       </p>
     </footer>
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="scripts.js?v=salsa-profile-3"></script>
   </body>
 </html>
