@@ -513,3 +513,30 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* Formations: attack at the top, goalkeeper at the bottom. */
+.position-row[data-row="ATT"] { order: 0; }
+.position-row[data-row="MID"] { order: 1; }
+.position-row[data-row="DEF"] { order: 2; }
+.position-row[data-row="GKP"] { order: 3; }
+.pitch-buttons { order: 4; }
+.formation-controls {
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  color: white;
+}
+.formation-controls label { font-weight: bold; margin-right: 0.5rem; }
+.formation-controls select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font: inherit;
+}
+.formation-controls p { font-size: 0.8rem; line-height: 1.5; }
+.position-row { width: 100%; }
+.position-slot { flex: 0 1 120px; min-width: 0; box-sizing: border-box; }
+.slot-filled { box-sizing: border-box; overflow-wrap: anywhere; padding: 0.2rem; }
+@media (max-width: 500px) {
+  .position-row { gap: 0.5rem; }
+  .position-slot { flex-basis: 100px; font-size: 0.75rem; }
+  .slot-filled { font-size: 0.75rem; }
+}
